@@ -1,7 +1,33 @@
+using System;
+using System.Collections;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
+[Serializable]
+public class Cooldown
+{
+    [SerializeField] private float CooldownTime;
+    private float lastUsedTime;
+
+    // constructor (initialization)
+    public Cooldown(float cooldownTime)
+    {
+        CooldownTime = cooldownTime;
+        lastUsedTime = -cooldownTime; // initialize to allow immediate use
+    }
+
+    public bool IsReady()
+    {
+        return Time.time >= lastUsedTime + CooldownTime;
+    }
+
+    public void Trigger()
+    {
+        lastUsedTime = Time.time;
+    }
+}
 
 public class BasePlayer : MonoBehaviour
 {
@@ -12,22 +38,33 @@ public class BasePlayer : MonoBehaviour
     private bool doubleJumpAvailable = true;
     private bool isGrounded;
 
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float jumpForce = 10f;
-    [SerializeField] private float dashForce = 15f;
-    [SerializeField] private float airControl = 3f;
+    private float moveSpeed = 5f;
+    private float jumpForce = 10f;
+    private float dashForce = 15f;
+    private float dashDuration = 0.2f; // in seconds
+    private Cooldown dashCooldown = new Cooldown(5f); // 2 seconds cooldown
+    private float airControl = 3f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // method to assign values to the player attributes
+    public void AssignValues(float moveSpeed, float jumpForce, float dashForce, float dashDuration, Cooldown dashCooldown, float airControl)
+    {
+        this.moveSpeed = moveSpeed;
+        this.jumpForce = jumpForce;
+        this.dashForce = dashForce;
+        this.dashDuration = dashDuration;
+        this.dashCooldown = dashCooldown;
+        this.airControl = airControl;
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (IsGrounded())
+        if (IsGrounded() && rb.gravityScale != 0)
         {
             doubleJumpAvailable = true; // reset double jump when grounded
             rb.linearVelocityX = moveInput.x * moveSpeed; // grounded means instant horizontal control
@@ -55,25 +92,6 @@ public class BasePlayer : MonoBehaviour
         return false;
     }
 
-    //private void OnCollisionEnter2D(Collision2D other)
-    //{
-    //    // check if the collided object has the "Ground" or "Player" tag
-    //    if (other.collider.CompareTag("Ground") || other.collider.CompareTag("Player"))
-    //    {
-    //        isGrounded = true;
-    //    }
-    //}
-
-    //private void OnCollisionExit2D(Collision2D other)
-    //{
-    //    // Only set isGrounded to false if the player leaves the actual ground
-    //    // This prevents an issue where leaving another player makes you unable to jump on the ground
-    //    if (other.collider.CompareTag("Ground"))
-    //    {
-    //        isGrounded = false;
-    //    }
-    //}
-
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
@@ -95,6 +113,23 @@ public class BasePlayer : MonoBehaviour
 
     public void OnDash(InputAction.CallbackContext context)
     {
-        print("guacalmolle");
+        if (context.performed && dashCooldown.IsReady())
+        {
+            StartCoroutine("DashCoroutine");
+            dashCooldown.Trigger();
+        }
+    }
+
+    IEnumerator DashCoroutine()
+    {
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0; // disable gravity during dash
+
+        // determine dash direction (if not pressing anything, base it off previously pressed horizontal direction)
+        Vector2 dashDirection = new Vector2(Mathf.Sign(moveInput.x) != 0 ? Mathf.Sign(moveInput.x) : transform.localScale.x, 0).normalized;
+        rb.linearVelocity = dashDirection * dashForce;
+
+        yield return new WaitForSeconds(dashDuration); // pause for dash duration
+        rb.gravityScale = originalGravity; // restore original gravity
     }
 }
