@@ -15,6 +15,7 @@ public class BasePlayer : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private float dashForce = 15f;
+    [SerializeField] private float airControl = 3f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,9 +29,14 @@ public class BasePlayer : MonoBehaviour
     {
         if (IsGrounded())
         {
-            doubleJumpAvailable = true; // Reset double jump when grounded
+            doubleJumpAvailable = true; // reset double jump when grounded
+            rb.linearVelocityX = moveInput.x * moveSpeed; // grounded means instant horizontal control
         }
-        rb.linearVelocityX = moveInput.x * moveSpeed;
+        else
+        {
+            rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, moveInput.x * moveSpeed, airControl * Time.deltaTime); // reduced air control with smoothing
+        }
+
     }
 
     private bool IsGrounded()
@@ -77,7 +83,8 @@ public class BasePlayer : MonoBehaviour
     {
         if (context.performed && doubleJumpAvailable)
         {
-            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            rb.linearVelocityY = jumpForce;
+            rb.linearVelocityX = moveInput.x * moveSpeed; // instant horizontal control
 
             if (!IsGrounded())
             {
