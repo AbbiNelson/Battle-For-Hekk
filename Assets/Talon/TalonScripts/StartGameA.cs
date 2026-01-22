@@ -5,7 +5,7 @@ public class StartGameA : MonoBehaviour
 {
     public GameObject text;
     bool isTextActive = true;
-    public float delay = 1f;
+    public float delay = 0.5f;
     public void OnPressA(InputAction.CallbackContext ctx)
     {
         if (ctx.performed)
@@ -26,17 +26,17 @@ public class StartGameA : MonoBehaviour
     private void Update()
     {
         delay -= Time.deltaTime;
-        if (isTextActive && delay == 0f)
+        if (isTextActive && delay <= 0f)
         {
             text.SetActive(true);
             isTextActive = false;
-            delay = 1f;
+            delay = 0.5f;
         }
-        else if (isTextActive == false && delay == 0f)
+        else if (isTextActive == false && delay <= 0f)
         {
             text.SetActive(false);
             isTextActive = true;
-            delay = 1f;
+            delay = 0.5f;
         }
     }
 }
