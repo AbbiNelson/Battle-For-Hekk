@@ -687,9 +687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd0495a38df17e4e9ae5ff80ae4d7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionPrefab: {fileID: 7603020320232490308, guid: 4f47fb15069078c4dbdad9a315912494, type: 3}
-  prevCharacter: {fileID: 0}
-  selCharacter: {fileID: 0}
 --- !u!1 &892216641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,7 +1041,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fight
+  m_text: FIGHT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1077,7 +1074,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

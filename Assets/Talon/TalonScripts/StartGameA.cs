@@ -11,6 +11,7 @@ public class StartGameA : MonoBehaviour
     public GameObject text;
     bool isTextActive = true;
     private float delay = 0.5f;
+    bool canPress = true;
 
     private void Awake()
     {
@@ -20,9 +21,10 @@ public class StartGameA : MonoBehaviour
 
     public void OnPressA(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (ctx.performed && canPress)
         {
             Debug.Log("Start Game A Pressed");
+            canPress = false;
             StartCoroutine(LoadLevel());
             // Add your logic to start Game A here
         }
