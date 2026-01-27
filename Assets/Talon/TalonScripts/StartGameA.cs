@@ -11,7 +11,7 @@ public class StartGameA : MonoBehaviour
     public GameObject text;
     bool isTextActive = true;
     private float delay = 0.5f;
-    bool canPress = true;
+    [HideInInspector] public bool canPress = true;
 
     private void Awake()
     {
