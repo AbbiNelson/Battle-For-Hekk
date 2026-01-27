@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -7,6 +8,10 @@ using UnityEngine.UIElements;
 public class PlayerShotgun : MonoBehaviour
 {
     [SerializeField] private GameObject gun;
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private Transform bulletSpawnPoint;
+
+    private GameObject bulletInst;
 
     private Vector2 worldPosition;
     private Vector2 direction;
@@ -14,6 +19,15 @@ public class PlayerShotgun : MonoBehaviour
     private void Update()
     {
         HandleGunRotation();
+        HandleGunShooting();
+    }
+
+    private void HandleGunShooting()
+    {
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            bulletInst = Instantiate(bullet, bulletSpawnPoint.position, gun.transform.rotation);
+        }
     }
 
     private void HandleGunRotation()
@@ -25,7 +39,16 @@ public class PlayerShotgun : MonoBehaviour
         Vector3 localScale = Vector3.one;
 
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-    }
 
-    
+        if(angle > 90 || angle < -90)
+        {
+            localScale.y = -1f;
+        }
+        else
+        {
+            localScale.y = 1f;
+        }
+
+        gun.transform.localScale = localScale;
+    }    
 }
