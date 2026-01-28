@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     float horizontalInput;
-    float moveSpeed = 9f;
-    float jumpPower = 7f;
+    public float moveSpeed = 9f;
+    public float jumpPower = 7f;
     bool isJumping = false;
     Rigidbody2D rb;
     
@@ -16,8 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
    
 
-    // Add missing timer field
-    private float timer = 0f;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
 
-        // FlipSprite();
+        
 
         if (Input.GetButtonDown("Jump") && !isJumping)
         {
