@@ -9,7 +9,7 @@ public class PlayerShotgun : MonoBehaviour
 {
     [SerializeField] private GameObject gun;
     [SerializeField] private GameObject bullet;
-    [SerializeField] private Transform bulletSpawnPoint;
+    [SerializeField] private Transform[] bulletSpawnPoint;
 
     private GameObject bulletInst;
 
@@ -26,7 +26,10 @@ public class PlayerShotgun : MonoBehaviour
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            bulletInst = Instantiate(bullet, bulletSpawnPoint.position, gun.transform.rotation);
+            for (int i = 0; i < bulletSpawnPoint.Length; i++)
+            {
+                bulletInst = Instantiate(bullet, bulletSpawnPoint[i].position, gun.transform.rotation);
+            }
         }
     }
 

@@ -180,3 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomralBulletSpeed: 15
+  destoryTime: 3
+  whatDestroysBullet:
+    serializedVersion: 2
+    m_Bits: 192
