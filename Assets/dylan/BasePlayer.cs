@@ -87,7 +87,7 @@ public class BasePlayer : MonoBehaviour
 
         anim.SetBool("isRunning", moveInput.x != 0);
         anim.SetBool("isGrounded", IsGrounded());
-        //anim.SetBool("isDashing", rb.gravityScale == 0);
+        anim.SetBool("isDashing", rb.gravityScale == 0);
 
         anim.SetFloat("yVel", rb.linearVelocityY);
     }
@@ -138,6 +138,9 @@ public class BasePlayer : MonoBehaviour
         {
             StartCoroutine("DashCoroutine");
             dashCooldown.Trigger();
+
+            // trigger dash animation
+            anim.SetTrigger("Dash");
         }
     }
 
