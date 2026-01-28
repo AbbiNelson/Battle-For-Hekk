@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b45139ba0a74d714482dacfe5295245d
+guid: 4058e9c5701e5d34392b21f6b5adc408
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7419286359148050453
-    second: Dimmy_0
+      213: 5480174908795409071
+    second: Fighter screeen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dimmy_0
+      name: Fighter screeen_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be7441c8d56690990800000000000000
-      internalID: -7419286359148050453
+      spriteID: fa252c95b0e7d0c40800000000000000
+      internalID: 5480174908795409071
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Dimmy_0: -7419286359148050453
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
