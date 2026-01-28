@@ -1,7 +1,5 @@
 using System;
 using System.Collections;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -33,10 +31,10 @@ public class BasePlayer : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Collider2D coll;
+    private Animator anim;
 
     private Vector2 moveInput;
     private bool doubleJumpAvailable = true;
-    private bool isGrounded;
 
     private float moveSpeed = 5f;
     private float jumpForce = 10f;
@@ -60,6 +58,7 @@ public class BasePlayer : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -73,13 +72,32 @@ public class BasePlayer : MonoBehaviour
         {
             rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, moveInput.x * moveSpeed, airControl * Time.deltaTime); // reduced air control with smoothing
         }
+    }
 
+    private void LateUpdate()
+    {
+        if (rb.linearVelocityX > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1); // facing right
+        }
+        else if (rb.linearVelocityX < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1); // facing left
+        }
+
+        anim.SetBool("isRunning", moveInput.x != 0);
+        anim.SetBool("isGrounded", IsGrounded());
+        //anim.SetBool("isDashing", rb.gravityScale == 0);
+
+        anim.SetFloat("yVel", rb.linearVelocityY);
     }
 
     private bool IsGrounded()
     {
         // Implement ground check logic here
-        Collider2D[] bottomCollisions = Physics2D.OverlapCircleAll(transform.position + Vector3.down, 0.1f);
+        Collider2D[] bottomCollisions = Physics2D.OverlapCircleAll(transform.position + Vector3.right * 0.67f + Vector3.down * 2f, 0.1f);
+        //Debug.DrawLine(transform.position, transform.position + Vector3.right * 0.67f + Vector3.down * 2f, Color.red);
+
 
         foreach (var collision in bottomCollisions)
         {
@@ -108,6 +126,9 @@ public class BasePlayer : MonoBehaviour
             {
                 doubleJumpAvailable = false; // Consume double jump
             }
+
+            // trigger jump animation
+            anim.SetTrigger("Jump");
         }
     }
 
