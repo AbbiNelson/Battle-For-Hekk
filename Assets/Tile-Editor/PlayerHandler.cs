@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerHandler : MonoBehaviour
@@ -17,6 +18,7 @@ public class PlayerHandler : MonoBehaviour
         
     }
     public void SelectSprite() {
+        Debug.Log("Selecting Sprite for Player " + playerCount);
         selectedSprite = spriteOptions[playerCount];
 
     }

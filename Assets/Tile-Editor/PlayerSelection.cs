@@ -12,10 +12,14 @@ public class PlayerSelection : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         pH.playerCount++;
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        pH.SelectSprite();
         spriteRenderer.sprite = pH.selectedSprite;
     }
     public void Move(InputAction.CallbackContext ctx)
     {
         rb2d.linearVelocity = ctx.ReadValue<Vector2>() * new Vector2(speed, speed);
+    }
+    public void Interact() { 
+    
     }
 }
