@@ -776,7 +776,7 @@ MonoBehaviour:
   startGameA: {fileID: 1218336046}
   musicSource: {fileID: 1827039385}
   sfxSource: {fileID: 630119197}
-  background: {fileID: 8300000, guid: 9e90835b326ccd8479be34578628621e, type: 3}
+  background: {fileID: 8300000, guid: 4c9b97afd7fcac14a98b01de28fd62a2, type: 3}
   aButton: {fileID: 8300000, guid: 76368b15bbbb6d7439690e1d8347f137, type: 3}
 --- !u!4 &964298372
 Transform:
@@ -1164,10 +1164,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9e90835b326ccd8479be34578628621e, type: 3}
-  m_Resource: {fileID: 8300000, guid: 9e90835b326ccd8479be34578628621e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4c9b97afd7fcac14a98b01de28fd62a2, type: 3}
+  m_Resource: {fileID: 8300000, guid: 4c9b97afd7fcac14a98b01de28fd62a2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
