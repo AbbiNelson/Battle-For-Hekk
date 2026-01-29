@@ -6,8 +6,6 @@ public class NewTile : MonoBehaviour
 {
     public GameObject blankTilePrefab;
     public bool createTileAtMouse = false;
-    public RandomTile rTS;
-
 
     void Update()
     {

@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 282773090}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Grid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,7 +401,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blankTilePrefab: {fileID: 3157051505937883690, guid: 7a0153643d9b7a741a107a683c5dc894, type: 3}
   createTileAtMouse: 1
-  rTS: {fileID: 0}
 --- !u!1 &1295737570
 GameObject:
   m_ObjectHideFlags: 0
@@ -34198,7 +34197,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 80, y: 50, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1895563898}
@@ -34285,7 +34284,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 80, y: 50, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1881051482}
@@ -34304,8 +34303,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileNum: 12
-  RGT: {fileID: 1041493497987178882, guid: 800725e08adbdef478813319d7cba3da, type: 3}
-  RGTL: []
+  tileList: []
+  tileOptions:
+  - {fileID: 4981646709884746559, guid: 02a8223103a4d7f46b01f055f591b0de, type: 3}
+  - {fileID: 4981646709884746559, guid: 31783f96753e1044cb52dc3e91d04a51, type: 3}
 --- !u!1001 &9166835517517118122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34352,6 +34353,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1282401168912692840, guid: c0f72e0160f903440bed22ec13891b50, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548884698816258644, guid: c0f72e0160f903440bed22ec13891b50, type: 3}
+      propertyPath: playerCount
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2718205771415261755, guid: c0f72e0160f903440bed22ec13891b50, type: 3}

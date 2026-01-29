@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerHandler : MonoBehaviour
 {
-    public int playerCount =  -1;
+    public int playerCount =  0;
     public Sprite selectedSprite;
     public Sprite[] spriteOptions;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

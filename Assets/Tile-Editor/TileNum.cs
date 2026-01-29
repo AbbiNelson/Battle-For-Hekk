@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TileNum : MonoBehaviour
 {
     public int tileNum;
-    public GameObject RGT; // RandomGenTile (prefab)
-    public GameObject[] RGTL; // RandomGenTileList
+    public GameObject[] tileList; // stores generated instances
+    public GameObject[] tileOptions; // prefabs to pick from
 
     // Bounds: between (X = -25, Y = 13) and (X = 25, Y = -13)
     public const float MinX = -25f;
@@ -20,14 +21,8 @@ public class TileNum : MonoBehaviour
 
     public void TileGen()
     {
-        if (RGT == null || tileNum <= 0)
-        {
-            RGTL = new GameObject[0];
-            return;
-        }
-
-        // Allocate an array sized to the requested numbe   r of tiles
-        RGTL = new GameObject[tileNum];
+        // Allocate an array sized to the requested number of tiles
+        tileList = new GameObject[Random.Range(InputSystem.devices.Count, tileNum)];
 
         for (int i = 0; i < tileNum; i++)
         {
@@ -36,25 +31,28 @@ public class TileNum : MonoBehaviour
             float randomY = Random.Range(MinY, MaxY);
             Vector3 pos = new Vector3(randomX, randomY, FixedZ);
 
+            // Pick a random prefab from tileOptions
+            int optionIndex = Random.Range(0, tileOptions.Length);
+            GameObject chosenPrefab = tileOptions[optionIndex];
+
             // Instantiate at randomized position and parent to this transform
-            RGTL[i] = Instantiate(RGT, pos, Quaternion.identity, transform);
+            tileList[i] = Instantiate(chosenPrefab, pos, Quaternion.identity, transform);
+
+            Debug.Log($"Generated tile [{i}] using option {optionIndex} at position: {pos}");
         }
     }
 
     // Call this to destroy all generated tiles and clear the array
     public void ClearGeneratedTiles()
     {
-        if (RGTL == null)
-            return;
-
-        for (int i = 0; i < RGTL.Length; i++)
+        for (int i = 0; i < tileList.Length; i++)
         {
-            if (RGTL[i] != null)
-                Destroy(RGTL[i]);
+            if (tileList[i] != null)
+                Destroy(tileList[i]);
 
-            RGTL[i] = null;
+            tileList[i] = null;
         }
 
-        RGTL = new GameObject[0];
+        tileList = new GameObject[0];
     }
 }

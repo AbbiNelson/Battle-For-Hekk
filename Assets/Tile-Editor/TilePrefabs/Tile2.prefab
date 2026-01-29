@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2777328816682941420}
   - component: {fileID: 5893072719371897583}
+  - component: {fileID: 6051713650723986355}
   m_Layer: 0
   m_Name: Tile2
   m_TagString: Untagged
@@ -91,6 +92,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6051713650723986355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4981646709884746559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29f355d046921a41858f1ae3a5373a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  snapEveryFrame: 0
+  snapOnStart: 1
 --- !u!1 &5187798362279616638
 GameObject:
   m_ObjectHideFlags: 0

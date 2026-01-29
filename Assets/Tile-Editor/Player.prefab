@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 675949010845639087}
   - component: {fileID: 7941431949171232440}
   - component: {fileID: 4650507398293949489}
+  - component: {fileID: 7342380913805462932}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -105,6 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 675949010845639087}
   speed: 15
+  pH: {fileID: 0}
 --- !u!50 &675949010845639087
 Rigidbody2D:
   serializedVersion: 5
@@ -262,3 +264,17 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7342380913805462932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3157051505937883690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 950b4a6e3f9b99040b350175bc316bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blankTilePrefab: {fileID: 0}
+  createTileAtMouse: 0
