@@ -12,6 +12,9 @@ public class PlayerShotgun : MonoBehaviour
     [SerializeField] private Transform[] bulletSpawnPoint;
 
     private GameObject bulletInst;
+    public float recoilForce = 5f;
+    private float timeLeft;
+    public float resetTime;
 
     private Vector2 worldPosition;
     private Vector2 direction;
@@ -20,16 +23,26 @@ public class PlayerShotgun : MonoBehaviour
     {
         HandleGunRotation();
         HandleGunShooting();
+        timeLeft -= Time.deltaTime;
+        
+    }
+
+    public void Recoil()
+    {
+        GetComponent<Rigidbody2D>().AddForce(-direction * recoilForce);
     }
 
     private void HandleGunShooting()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current.leftButton.wasPressedThisFrame && timeLeft <= 0f)
         {
             for (int i = 0; i < bulletSpawnPoint.Length; i++)
             {
                 bulletInst = Instantiate(bullet, bulletSpawnPoint[i].position, gun.transform.rotation);
+                Recoil();
             }
+
+            timeLeft = resetTime;
         }
     }
 
