@@ -1,3 +1,4 @@
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,12 +12,16 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private Cooldown dashCooldown = new(5f);
     [SerializeField] private float airControl = 3f;
 
+    [SerializeField] private RuntimeAnimatorController[] playerAnimatorController;
+
     public void OnPlayerJoined(PlayerInput player)
     {
         Debug.Log("New player joined: " + player.playerIndex);
 
         // Additional setup for the new player can be done here
-        player.gameObject.GetComponent<BasePlayer>().AssignValues(
+        BasePlayer playerScript = player.gameObject.GetComponent<BasePlayer>();
+
+        playerScript.AssignValues(
             moveSpeed: this.moveSpeed,
             jumpForce: this.jumpForce,
             dashForce: this.dashForce,
@@ -24,5 +29,7 @@ public class PlayerManager : MonoBehaviour
             dashCooldown: this.dashCooldown,
             airControl: this.airControl
         );
+
+        playerScript.AssignAnimation(this.playerAnimatorController[player.playerIndex % playerAnimatorController.Length]);
     }
 }

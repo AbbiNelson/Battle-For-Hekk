@@ -1,31 +1,19 @@
 fileFormatVersion: 2
-guid: d8ee9369e185e604b9d5d45c6104e78f
+guid: b01273770d1368f44adcf192c9847955
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2312734637188710935
-    second: demon_walking_0
+      213: 304156741058487411
+    second: wimmy_dash_0
   - first:
-      213: 7510313706602664496
-    second: demon_walking_1
+      213: 5184666387178303103
+    second: wimmy_dash_1
   - first:
-      213: 8055814359961223147
-    second: demon_walking_2
+      213: -4104744517749680483
+    second: wimmy_dash_2
   - first:
-      213: 1073019370101987136
-    second: demon_walking_3
-  - first:
-      213: -3446951138599260558
-    second: demon_walking_4
-  - first:
-      213: -4498933892116600188
-    second: demon_walking_5
-  - first:
-      213: 6572566628788177850
-    second: demon_walking_6
-  - first:
-      213: 7237709130810605659
-    second: demon_walking_7
+      213: -8151801788522724848
+    second: wimmy_dash_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -147,95 +135,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: demon_walking_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.67, y: 0.375}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9edff92d91487efd0800000000000000
-      internalID: -2312734637188710935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: demon_walking_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.67, y: 0.375}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0329cc9568ef93860800000000000000
-      internalID: 7510313706602664496
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: demon_walking_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.67, y: 0.375}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: befbaf59a700ccf60800000000000000
-      internalID: 8055814359961223147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: demon_walking_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.67, y: 0.375}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 047da089e6124ee00800000000000000
-      internalID: 1073019370101987136
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: demon_walking_4
+      name: wimmy_dash_0
       rect:
         serializedVersion: 2
         x: 0
@@ -250,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27ea9a1c338f920d0800000000000000
-      internalID: -3446951138599260558
+      spriteID: 374e4dac1f4983400800000000000000
+      internalID: 304156741058487411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: demon_walking_5
+      name: wimmy_dash_1
       rect:
         serializedVersion: 2
         x: 64
@@ -272,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 48aac6426739091c0800000000000000
-      internalID: -4498933892116600188
+      spriteID: f7eabae0c92a3f740800000000000000
+      internalID: 5184666387178303103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: demon_walking_6
+      name: wimmy_dash_2
       rect:
         serializedVersion: 2
         x: 128
@@ -294,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: abb8183a682763b50800000000000000
-      internalID: 6572566628788177850
+      spriteID: d965cc5eb940907c0800000000000000
+      internalID: -4104744517749680483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: demon_walking_7
+      name: wimmy_dash_3
       rect:
         serializedVersion: 2
         x: 192
@@ -316,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5041918b12817460800000000000000
-      internalID: 7237709130810605659
+      spriteID: 01285b3a67bfede80800000000000000
+      internalID: -8151801788522724848
       vertices: []
       indices: 
       edges: []
@@ -326,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 65f968a68d8334e4297e613b9d9cb638
+    spriteID: 508a0df04bc34954f91fb876794e9470
     internalID: 0
     vertices: []
     indices: 
@@ -336,14 +236,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      demon_walking_0: -2312734637188710935
-      demon_walking_1: 7510313706602664496
-      demon_walking_2: 8055814359961223147
-      demon_walking_3: 1073019370101987136
-      demon_walking_4: -3446951138599260558
-      demon_walking_5: -4498933892116600188
-      demon_walking_6: 6572566628788177850
-      demon_walking_7: 7237709130810605659
+      wimmy_dash_0: 304156741058487411
+      wimmy_dash_1: 5184666387178303103
+      wimmy_dash_2: -4104744517749680483
+      wimmy_dash_3: -8151801788522724848
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

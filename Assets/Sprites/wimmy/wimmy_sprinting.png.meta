@@ -147,177 +147,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wizard_sprinting_0
+      name: wimmy_sprinting_0
       rect:
         serializedVersion: 2
         x: 0
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5c90d7fee3a214260800000000000000
-      internalID: 7079986538997418437
+      spriteID: c36a496af687bbc4d8a4849d64d1c852
+      internalID: -785556284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_sprinting_1
+      name: wimmy_sprinting_1
       rect:
         serializedVersion: 2
         x: 64
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: be6d6296e57f7bf70800000000000000
-      internalID: 9203096348418037483
+      spriteID: 43193f7baa76261489947f88ddb1def9
+      internalID: -1918806389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_sprinting_2
+      name: wimmy_sprinting_2
       rect:
         serializedVersion: 2
         x: 128
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e5e13d5c4301aee10800000000000000
-      internalID: 2227610784531422814
+      spriteID: c8621db09fa497542834f27e79ce94f2
+      internalID: -1021275312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_sprinting_3
+      name: wimmy_sprinting_3
       rect:
         serializedVersion: 2
         x: 192
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 53928668441b199f0800000000000000
-      internalID: -463394378771584715
+      spriteID: 688107f67054dad44970ed1f01050cb8
+      internalID: -1119846083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_sprinting_4
+      name: wimmy_sprinting_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 56f0ae44bff8a1ee0800000000000000
-      internalID: -1289560033932472475
+      spriteID: be1dc0d6896e0c240a3196039064cb44
+      internalID: -1894334426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_sprinting_5
+      name: wimmy_sprinting_5
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7e544f29a3e30d240800000000000000
-      internalID: 4814416422953567719
+      spriteID: c1c774b97151a0c47b04a69045e3fa0d
+      internalID: 66886204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_sprinting_6
+      name: wimmy_sprinting_6
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 88c9fa22b7b9d5f50800000000000000
-      internalID: 6871819559602461832
+      spriteID: 8438b64ee15b0fc408f3d8a2cfaa6c35
+      internalID: 363873882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wizard_sprinting_7
+      name: wimmy_sprinting_7
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3f92c9bf6cc4429a0800000000000000
-      internalID: -6258793164629595661
+      spriteID: 589fdca90226d264989a95b3240fedd5
+      internalID: -2117106730
       vertices: []
       indices: 
       edges: []
@@ -336,14 +336,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wizard_sprinting_0: 7079986538997418437
-      wizard_sprinting_1: 9203096348418037483
-      wizard_sprinting_2: 2227610784531422814
-      wizard_sprinting_3: -463394378771584715
-      wizard_sprinting_4: -1289560033932472475
-      wizard_sprinting_5: 4814416422953567719
-      wizard_sprinting_6: 6871819559602461832
-      wizard_sprinting_7: -6258793164629595661
+      wimmy_sprinting_0: -785556284
+      wimmy_sprinting_1: -1918806389
+      wimmy_sprinting_2: -1021275312
+      wimmy_sprinting_3: -1119846083
+      wimmy_sprinting_4: -1894334426
+      wimmy_sprinting_5: 66886204
+      wimmy_sprinting_6: 363873882
+      wimmy_sprinting_7: -2117106730
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

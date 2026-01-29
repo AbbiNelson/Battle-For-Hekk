@@ -1,49 +1,49 @@
 fileFormatVersion: 2
-guid: 441ae4eedeac59440af2c879026b442d
+guid: 46a2a76099175b648924decf310d68ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8567186622430992613
-    second: temp_0
+      213: 1445545784821041874
+    second: wimmy_jumping_0
   - first:
-      213: -2261327995457166861
-    second: temp_1
+      213: -8695822527662266167
+    second: wimmy_jumping_1
   - first:
-      213: 8745322115954160273
-    second: temp_2
+      213: -2471348548364294848
+    second: wimmy_jumping_2
   - first:
-      213: -565464752652085650
-    second: temp_3
+      213: 1646452049259724648
+    second: wimmy_jumping_3
   - first:
-      213: -2142828324144449258
-    second: temp_4
+      213: -1132109690653351603
+    second: wimmy_jumping_4
   - first:
-      213: 4603455339990160366
-    second: temp_5
+      213: 9014282061640317927
+    second: wimmy_jumping_5
   - first:
-      213: 3944306975531898561
-    second: temp_6
+      213: -934318532624946876
+    second: wimmy_jumping_6
   - first:
-      213: -9059789658751367362
-    second: temp_7
+      213: 1851510025782348339
+    second: wimmy_jumping_7
   - first:
-      213: 2384413834954791759
-    second: temp_8
+      213: 2841607069385497714
+    second: wimmy_jumping_8
   - first:
-      213: -7307997345420304702
-    second: temp_9
+      213: -8315267118150917831
+    second: wimmy_jumping_9
   - first:
-      213: 5629144372083115928
-    second: temp_10
+      213: 3668538321205561247
+    second: wimmy_jumping_10
   - first:
-      213: -1606550136845464520
-    second: temp_11
+      213: 4102888471133191740
+    second: wimmy_jumping_11
   - first:
-      213: -9000275550964384939
-    second: temp_12
+      213: -2843644988239115749
+    second: wimmy_jumping_12
   - first:
-      213: 4099707557266668184
-    second: temp_13
+      213: -8154283140117519279
+    second: wimmy_jumping_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -165,309 +165,309 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: temp_0
+      name: wimmy_jumping_0
       rect:
         serializedVersion: 2
         x: 0
         y: 192
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b17a585682d3b1980800000000000000
-      internalID: -8567186622430992613
+      spriteID: 2da42d28b3c9f0410800000000000000
+      internalID: 1445545784821041874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temp_1
+      name: wimmy_jumping_1
       rect:
         serializedVersion: 2
         x: 64
         y: 192
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f1212e4b262e90e0800000000000000
-      internalID: -2261327995457166861
+      spriteID: 9c8e9d8cb7b325780800000000000000
+      internalID: -8695822527662266167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temp_2
+      name: wimmy_jumping_2
       rect:
         serializedVersion: 2
         x: 128
         y: 192
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 192b0d73120ad5970800000000000000
-      internalID: 8745322115954160273
+      spriteID: 045a19ac69104bdd0800000000000000
+      internalID: -2471348548364294848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temp_3
+      name: wimmy_jumping_3
       rect:
         serializedVersion: 2
         x: 192
         y: 192
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e661b2dadc01728f0800000000000000
-      internalID: -565464752652085650
+      spriteID: 86ff6df5a6f59d610800000000000000
+      internalID: 1646452049259724648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temp_4
+      name: wimmy_jumping_4
       rect:
         serializedVersion: 2
         x: 0
         y: 128
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 61979bc0ef42342e0800000000000000
-      internalID: -2142828324144449258
+      spriteID: d4164d90c30f940f0800000000000000
+      internalID: -1132109690653351603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temp_5
+      name: wimmy_jumping_5
       rect:
         serializedVersion: 2
         x: 64
         y: 128
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee31d77dd32c2ef30800000000000000
-      internalID: 4603455339990160366
+      spriteID: 7eb3f3d76c9291d70800000000000000
+      internalID: 9014282061640317927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temp_6
+      name: wimmy_jumping_6
       rect:
         serializedVersion: 2
         x: 128
         y: 128
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c69ca1eb4efcb630800000000000000
-      internalID: 3944306975531898561
+      spriteID: 44963dbae32a803f0800000000000000
+      internalID: -934318532624946876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temp_7
+      name: wimmy_jumping_7
       rect:
         serializedVersion: 2
         x: 192
         y: 128
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e370e526e49254280800000000000000
-      internalID: -9059789658751367362
+      spriteID: 33ac4d80f82e1b910800000000000000
+      internalID: 1851510025782348339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temp_8
+      name: wimmy_jumping_8
       rect:
         serializedVersion: 2
         x: 0
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4bd10eefb3271120800000000000000
-      internalID: 2384413834954791759
+      spriteID: 27c16f9f29a6f6720800000000000000
+      internalID: 2841607069385497714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temp_9
+      name: wimmy_jumping_9
       rect:
         serializedVersion: 2
         x: 64
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ce99be3227c49a90800000000000000
-      internalID: -7307997345420304702
+      spriteID: 931e02abc9c3a9c80800000000000000
+      internalID: -8315267118150917831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temp_10
+      name: wimmy_jumping_10
       rect:
         serializedVersion: 2
         x: 128
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 897476f5bfcbe1e40800000000000000
-      internalID: 5629144372083115928
+      spriteID: f978d589a2449e230800000000000000
+      internalID: 3668538321205561247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temp_11
+      name: wimmy_jumping_11
       rect:
         serializedVersion: 2
         x: 192
         y: 64
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83c8873992364b9e0800000000000000
-      internalID: -1606550136845464520
+      spriteID: c3e70f2935360f830800000000000000
+      internalID: 4102888471133191740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temp_12
+      name: wimmy_jumping_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55b72286219981380800000000000000
-      internalID: -9000275550964384939
+      spriteID: b1a00b013f75988d0800000000000000
+      internalID: -2843644988239115749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: temp_13
+      name: wimmy_jumping_13
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89a3dd95d4615e830800000000000000
-      internalID: 4099707557266668184
+      spriteID: 154a653ffaa26de80800000000000000
+      internalID: -8154283140117519279
       vertices: []
       indices: 
       edges: []
@@ -476,7 +476,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8a619f3f65c930c48a1bb6baa79038f3
+    spriteID: 27ade0179f2d89142a0c850ad7aff702
     internalID: 0
     vertices: []
     indices: 
@@ -486,20 +486,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      temp_0: -8567186622430992613
-      temp_1: -2261327995457166861
-      temp_10: 5629144372083115928
-      temp_11: -1606550136845464520
-      temp_12: -9000275550964384939
-      temp_13: 4099707557266668184
-      temp_2: 8745322115954160273
-      temp_3: -565464752652085650
-      temp_4: -2142828324144449258
-      temp_5: 4603455339990160366
-      temp_6: 3944306975531898561
-      temp_7: -9059789658751367362
-      temp_8: 2384413834954791759
-      temp_9: -7307997345420304702
+      wimmy_jumping_0: 1445545784821041874
+      wimmy_jumping_1: -8695822527662266167
+      wimmy_jumping_10: 3668538321205561247
+      wimmy_jumping_11: 4102888471133191740
+      wimmy_jumping_12: -2843644988239115749
+      wimmy_jumping_13: -8154283140117519279
+      wimmy_jumping_2: -2471348548364294848
+      wimmy_jumping_3: 1646452049259724648
+      wimmy_jumping_4: -1132109690653351603
+      wimmy_jumping_5: 9014282061640317927
+      wimmy_jumping_6: -934318532624946876
+      wimmy_jumping_7: 1851510025782348339
+      wimmy_jumping_8: 2841607069385497714
+      wimmy_jumping_9: -8315267118150917831
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
