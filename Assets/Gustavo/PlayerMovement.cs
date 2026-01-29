@@ -4,10 +4,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float horizontalInput;
-    float moveSpeed = 9f;
-    float jumpPower = 7f;
-    bool isJumping = false;
+    public float horizontalInput;
+    public float moveSpeed = 9f;
+    public float jumpPower = 7f;
+    public bool isJumping = false;
     Rigidbody2D rb;
     
 
