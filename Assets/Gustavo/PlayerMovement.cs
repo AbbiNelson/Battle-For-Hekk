@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public AudioSource jumpSoundEffect;
     float horizontalInput;
     public float moveSpeed = 9f;
     public float jumpPower = 7f;
@@ -22,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+        jumpSoundEffect = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
             isJumping = true;
+            jumpSoundEffect.Play();
         }
         
 
