@@ -162,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 2679116287147303877}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0009969457, y: -0.0009775625, z: 0.700131, w: 0.7140131}
-  m_LocalPosition: {x: -0.30100134, y: 6.986514, z: -0.0009503474}
+  m_LocalPosition: {x: -0.29, y: 8.6, z: 0}
   m_LocalScale: {x: 6.1531687, y: 1.5223922, z: 1.5469098}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -510,8 +510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39df7aa3d0b990540b2151973b7ddccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashingVelocity: 14
-  dashingTime: 0.5
+  moveSpeed: 9
+  jumpPower: 7
 --- !u!50 &3751740780773700821
 Rigidbody2D:
   serializedVersion: 5
@@ -612,6 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poisonTickTimers: 
+  burnTickTimers: 
 --- !u!114 &5791441375034547335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,6 +626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poisonTickTimers: 
+  burnTickTimers: 
 --- !u!1 &7473872509693632476
 GameObject:
   m_ObjectHideFlags: 0

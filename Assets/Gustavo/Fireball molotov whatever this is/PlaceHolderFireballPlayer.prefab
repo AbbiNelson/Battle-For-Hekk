@@ -112,7 +112,7 @@ Transform:
   m_GameObject: {fileID: 3013407691665579737}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0009969457, y: -0.0009775625, z: 0.700131, w: 0.7140131}
-  m_LocalPosition: {x: -0.30100134, y: 6.986514, z: -0.0009503474}
+  m_LocalPosition: {x: -0.29, y: 8.6, z: -0}
   m_LocalScale: {x: 6.1531687, y: 1.5223922, z: 1.5469098}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 8348190652829743629}
   m_Layer: 0
   m_Name: PlaceHolderFireballPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -362,8 +362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39df7aa3d0b990540b2151973b7ddccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashingVelocity: 14
-  dashingTime: 0.5
+  moveSpeed: 9
+  jumpPower: 7
 --- !u!50 &863461687044353539
 Rigidbody2D:
   serializedVersion: 5
@@ -452,7 +452,7 @@ MonoBehaviour:
   firePosition: {fileID: 7749659582767040457}
   Molotov: {fileID: 1064304261947391618, guid: 99c33f3febc9c50479b7eee1ef095c84, type: 3}
   cooldownTime: 2
-  nextFireTime: 2
+  nextFireTime: 0
 --- !u!114 &1694036588610453452
 MonoBehaviour:
   m_ObjectHideFlags: 0
