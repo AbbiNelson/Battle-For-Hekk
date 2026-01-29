@@ -11,8 +11,6 @@ public class fireball : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.linearVelocity = transform.right * projectileSpeed;
-
-        Destroy(gameObject, 5f);
     }
 
     

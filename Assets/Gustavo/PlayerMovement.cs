@@ -9,45 +9,28 @@ public class PlayerMovement : MonoBehaviour
     public float jumpPower = 7f;
     bool isJumping = false;
     Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
-    public int facingDirection = 1;
+    
 
+    
+   
 
+   
 
-
-
-
+    
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
+        horizontalInput = Input.GetAxis("Horizontal");
 
-        if (horizontalInput > .1f && facingDirection < 0)
-        {
-            Flip();
-        }
-        else if (horizontalInput < -.1f && facingDirection > 0)
-        {
-            Flip();
-        }
-
-        void Flip()
-        {
-            facingDirection *= -1;
-
-            Vector3 scale = transform.localScale;
-            scale.x *= -1;
-            transform.localScale = scale;
-        }
-
+        
 
         if (Input.GetButtonDown("Jump") && !isJumping)
         {
