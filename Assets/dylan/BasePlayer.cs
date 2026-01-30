@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -31,10 +33,10 @@ public class BasePlayer : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Collider2D coll;
-    private Animator anim;
 
     private Vector2 moveInput;
     private bool doubleJumpAvailable = true;
+    private bool isGrounded;
 
     private float moveSpeed = 5f;
     private float jumpForce = 10f;
@@ -43,7 +45,7 @@ public class BasePlayer : MonoBehaviour
     private Cooldown dashCooldown = new Cooldown(5f); // 2 seconds cooldown
     private float airControl = 3f;
 
-    // methods to assign values to the player attributes
+    // method to assign values to the player attributes
     public void AssignValues(float moveSpeed, float jumpForce, float dashForce, float dashDuration, Cooldown dashCooldown, float airControl)
     {
         this.moveSpeed = moveSpeed;
@@ -54,17 +56,10 @@ public class BasePlayer : MonoBehaviour
         this.airControl = airControl;
     }
 
-    public void AssignAnimation(RuntimeAnimatorController controller)
-    {
-        anim = GetComponent<Animator>();
-        anim.runtimeAnimatorController = controller;
-    }
-
-    void Awake()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
-        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -78,39 +73,13 @@ public class BasePlayer : MonoBehaviour
         {
             rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, moveInput.x * moveSpeed, airControl * Time.deltaTime); // reduced air control with smoothing
         }
-    }
 
-    private void LateUpdate()
-    {
-        if (rb.linearVelocityX > 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1); // facing right
-        }
-        else if (rb.linearVelocityX < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1); // facing left
-        }
-
-        anim.SetBool("isGrounded", IsGrounded());
-        anim.SetBool("isDashing", rb.gravityScale == 0);
-
-        anim.SetFloat("xVel", Mathf.Abs(rb.linearVelocityX));
-        anim.SetFloat("yVel", rb.linearVelocityY);
     }
 
     private bool IsGrounded()
     {
-        if (rb.linearVelocityY > 0)
-        {
-            return false; // if moving upwards, not grounded
-        }
-
         // Implement ground check logic here
-        Collider2D[] bottomCollisions = Physics2D.OverlapCircleAll(transform.position
-                                                                + 1.5f * Vector3.down, 0.1f);
-
-        Debug.DrawLine(transform.position, transform.position + 1.5f * Vector3.down, Color.red);
-
+        Collider2D[] bottomCollisions = Physics2D.OverlapCircleAll(transform.position + Vector3.down, 0.1f);
 
         foreach (var collision in bottomCollisions)
         {
@@ -132,16 +101,13 @@ public class BasePlayer : MonoBehaviour
     {
         if (context.performed && doubleJumpAvailable)
         {
+            rb.linearVelocityY = jumpForce;
+            rb.linearVelocityX = moveInput.x * moveSpeed; // instant horizontal control
+
             if (!IsGrounded())
             {
                 doubleJumpAvailable = false; // Consume double jump
             }
-
-            rb.linearVelocityY = jumpForce;
-            rb.linearVelocityX = moveInput.x * moveSpeed; // instant horizontal control
-
-            // trigger jump animation
-            anim.SetTrigger("Jump");
         }
     }
 
@@ -151,9 +117,6 @@ public class BasePlayer : MonoBehaviour
         {
             StartCoroutine("DashCoroutine");
             dashCooldown.Trigger();
-
-            // trigger dash animation
-            anim.SetTrigger("Dash");
         }
     }
 
