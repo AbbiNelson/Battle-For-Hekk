@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: d8ee9369e185e604b9d5d45c6104e78f
+guid: a1a4d8a254bcebd439f274063035ec0b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2312734637188710935
-    second: demon_walking_0
+      213: 7079986538997418437
+    second: wizard_sprinting_0
   - first:
-      213: 7510313706602664496
-    second: demon_walking_1
+      213: 9203096348418037483
+    second: wizard_sprinting_1
   - first:
-      213: 8055814359961223147
-    second: demon_walking_2
+      213: 2227610784531422814
+    second: wizard_sprinting_2
   - first:
-      213: 1073019370101987136
-    second: demon_walking_3
+      213: -463394378771584715
+    second: wizard_sprinting_3
   - first:
-      213: -3446951138599260558
-    second: demon_walking_4
+      213: -1289560033932472475
+    second: wizard_sprinting_4
   - first:
-      213: -4498933892116600188
-    second: demon_walking_5
+      213: 4814416422953567719
+    second: wizard_sprinting_5
   - first:
-      213: 6572566628788177850
-    second: demon_walking_6
+      213: 6871819559602461832
+    second: wizard_sprinting_6
   - first:
-      213: 7237709130810605659
-    second: demon_walking_7
+      213: -6258793164629595661
+    second: wizard_sprinting_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -147,7 +147,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: demon_walking_0
+      name: wimmy_sprinting_0
       rect:
         serializedVersion: 2
         x: 0
@@ -160,16 +160,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9edff92d91487efd0800000000000000
-      internalID: -2312734637188710935
+      spriteID: c36a496af687bbc4d8a4849d64d1c852
+      internalID: -785556284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: demon_walking_1
+      name: wimmy_sprinting_1
       rect:
         serializedVersion: 2
         x: 64
@@ -182,16 +182,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0329cc9568ef93860800000000000000
-      internalID: 7510313706602664496
+      spriteID: 43193f7baa76261489947f88ddb1def9
+      internalID: -1918806389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: demon_walking_2
+      name: wimmy_sprinting_2
       rect:
         serializedVersion: 2
         x: 128
@@ -204,16 +204,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: befbaf59a700ccf60800000000000000
-      internalID: 8055814359961223147
+      spriteID: c8621db09fa497542834f27e79ce94f2
+      internalID: -1021275312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: demon_walking_3
+      name: wimmy_sprinting_3
       rect:
         serializedVersion: 2
         x: 192
@@ -226,16 +226,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 047da089e6124ee00800000000000000
-      internalID: 1073019370101987136
+      spriteID: 688107f67054dad44970ed1f01050cb8
+      internalID: -1119846083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: demon_walking_4
+      name: wimmy_sprinting_4
       rect:
         serializedVersion: 2
         x: 0
@@ -248,16 +248,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 27ea9a1c338f920d0800000000000000
-      internalID: -3446951138599260558
+      spriteID: be1dc0d6896e0c240a3196039064cb44
+      internalID: -1894334426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: demon_walking_5
+      name: wimmy_sprinting_5
       rect:
         serializedVersion: 2
         x: 64
@@ -270,16 +270,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 48aac6426739091c0800000000000000
-      internalID: -4498933892116600188
+      spriteID: c1c774b97151a0c47b04a69045e3fa0d
+      internalID: 66886204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: demon_walking_6
+      name: wimmy_sprinting_6
       rect:
         serializedVersion: 2
         x: 128
@@ -292,16 +292,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: abb8183a682763b50800000000000000
-      internalID: 6572566628788177850
+      spriteID: 8438b64ee15b0fc408f3d8a2cfaa6c35
+      internalID: 363873882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: demon_walking_7
+      name: wimmy_sprinting_7
       rect:
         serializedVersion: 2
         x: 192
@@ -314,10 +314,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b5041918b12817460800000000000000
-      internalID: 7237709130810605659
+      spriteID: 589fdca90226d264989a95b3240fedd5
+      internalID: -2117106730
       vertices: []
       indices: 
       edges: []
@@ -326,7 +326,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 65f968a68d8334e4297e613b9d9cb638
+    spriteID: dbdb5af55aa335541ba93063697a18c4
     internalID: 0
     vertices: []
     indices: 
@@ -336,14 +336,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      demon_walking_0: -2312734637188710935
-      demon_walking_1: 7510313706602664496
-      demon_walking_2: 8055814359961223147
-      demon_walking_3: 1073019370101987136
-      demon_walking_4: -3446951138599260558
-      demon_walking_5: -4498933892116600188
-      demon_walking_6: 6572566628788177850
-      demon_walking_7: 7237709130810605659
+      wimmy_sprinting_0: -785556284
+      wimmy_sprinting_1: -1918806389
+      wimmy_sprinting_2: -1021275312
+      wimmy_sprinting_3: -1119846083
+      wimmy_sprinting_4: -1894334426
+      wimmy_sprinting_5: 66886204
+      wimmy_sprinting_6: 363873882
+      wimmy_sprinting_7: -2117106730
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
