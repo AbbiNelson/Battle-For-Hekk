@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerHandler
   - Grid
+  - Master
   layers:
   - Default
   - TransparentFX
