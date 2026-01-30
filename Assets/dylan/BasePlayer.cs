@@ -60,6 +60,12 @@ public class BasePlayer : MonoBehaviour
         anim.runtimeAnimatorController = controller;
     }
 
+    public void AssignColor(Material playerRecolor)
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        sr.material = playerRecolor;
+    }
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -69,7 +75,12 @@ public class BasePlayer : MonoBehaviour
 
     void Update()
     {
-        if (IsGrounded() && rb.gravityScale != 0)
+        if (rb.gravityScale == 0)
+        {
+            return; // skip movement control during dash
+        }
+
+        if (IsGrounded())
         {
             doubleJumpAvailable = true; // reset double jump when grounded
             rb.linearVelocityX = moveInput.x * moveSpeed; // grounded means instant horizontal control
@@ -107,7 +118,7 @@ public class BasePlayer : MonoBehaviour
 
         // Implement ground check logic here
         Collider2D[] bottomCollisions = Physics2D.OverlapCircleAll(transform.position
-                                                                + 1.5f * Vector3.down, 0.1f);
+                                                                + 1.3f * Vector3.down, 0.3f);
 
         Debug.DrawLine(transform.position, transform.position + 1.5f * Vector3.down, Color.red);
 
@@ -159,6 +170,7 @@ public class BasePlayer : MonoBehaviour
 
     IEnumerator DashCoroutine()
     {
+        print("dash :333");
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0; // disable gravity during dash
 
