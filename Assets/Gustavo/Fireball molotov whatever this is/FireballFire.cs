@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class MolotovThrow : MonoBehaviour
 {
+    public AudioSource Fireball;
     public Transform firePosition;
     public GameObject Molotov;
     public float cooldownTime = 5f;
@@ -13,7 +14,7 @@ public class MolotovThrow : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
         {
-            
+            Fireball.Play();
             Instantiate(Molotov, firePosition.position, firePosition.rotation);
             nextFireTime = Time.time + cooldownTime;
         }

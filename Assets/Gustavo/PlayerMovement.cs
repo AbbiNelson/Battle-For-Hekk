@@ -10,14 +10,6 @@ public class PlayerMovement : MonoBehaviour
     public float jumpPower = 7f;
     bool isJumping = false;
     Rigidbody2D rb;
-    
-
-    
-   
-
-   
-
-    
 
     // Start is called before the first frame update
     void Start()
