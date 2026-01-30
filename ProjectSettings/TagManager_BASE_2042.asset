@@ -6,7 +6,6 @@ TagManager:
   tags:
   - PlayerHandler
   - Grid
-  - Master
   layers:
   - Default
   - TransparentFX
@@ -14,8 +13,8 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
-  - Player
+  - 
+  - 
   - 
   - 
   - 
