@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 675949010845639087}
   - component: {fileID: 7941431949171232440}
   - component: {fileID: 4650507398293949489}
-  - component: {fileID: 7342380913805462932}
+  - component: {fileID: 1317224253928599339}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -216,7 +216,19 @@ MonoBehaviour:
     m_ActionId: 6b444451-8a00-4d00-a97e-f47457f736a8
     m_ActionName: 'Player/Look[/XInputControllerWindows/rightStick,/Mouse/delta,/Pen/delta]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1317224253928599339}
+        m_TargetAssemblyTypeName: NewTile, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 852140f2-7766-474d-8707-702459ba45f3
     m_ActionName: 'Player/Interact[/Keyboard/e,/XInputControllerWindows/buttonNorth]'
   - m_PersistentCalls:
@@ -264,7 +276,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &7342380913805462932
+--- !u!114 &1317224253928599339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -273,8 +285,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3157051505937883690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 950b4a6e3f9b99040b350175bc316bf0, type: 3}
+  m_Script: {fileID: 11500000, guid: fe4da1c2be8ac494889b875644ab9c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blankTilePrefab: {fileID: 0}
-  createTileAtMouse: 0
+  tile: {fileID: 0}

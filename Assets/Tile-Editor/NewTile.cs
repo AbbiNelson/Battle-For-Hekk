@@ -1,32 +1,37 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class NewTile : MonoBehaviour
 {
-    public GameObject blankTilePrefab;
-    public bool createTileAtMouse = false;
+    public GameObject tile;
+
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && createTileAtMouse)
-        {
-            CreateTileAtMouse();
-        }
-    }
-    public void OnCreateTileButton()
-    {
-        createTileAtMouse = !createTileAtMouse;
     }
 
-    private void CreateTileAtMouse()
+    // Called by the Input System action; wire this in your InputAction (performed)
+    public void Interact(InputAction.CallbackContext ctx)
     {
-        if (EventSystem.current.IsPointerOverGameObject())
+        if (tile == null)
             return;
 
-        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorld.z = transform.position.z;
-        GameObject inst = Instantiate(blankTilePrefab, mouseWorld, Quaternion.identity);
+        tile.transform.SetParent(transform, false);
+        tile.transform.localPosition = Vector3.zero;
+        tile.transform.localRotation = Quaternion.identity;
 
-     }
+
+        Debug.Log($"NewTile: Parented '{tile.name}' to '{name}'.");
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        tile = other.gameObject;
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+            tile = null;
+    }
 }
