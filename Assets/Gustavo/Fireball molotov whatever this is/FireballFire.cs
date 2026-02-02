@@ -14,8 +14,8 @@ public class MolotovThrow : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
         {
-            Fireball.Play();
             Instantiate(Molotov, firePosition.position, firePosition.rotation);
+            Fireball.Play();
             nextFireTime = Time.time + cooldownTime;
         }
         

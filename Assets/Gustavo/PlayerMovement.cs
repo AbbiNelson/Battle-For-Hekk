@@ -11,14 +11,12 @@ public class PlayerMovement : MonoBehaviour
     bool isJumping = false;
     Rigidbody2D rb;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         jumpSoundEffect = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
