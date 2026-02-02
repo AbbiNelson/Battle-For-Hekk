@@ -13,6 +13,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private float airControl = 3f;
 
     [SerializeField] private RuntimeAnimatorController[] playerAnimatorController;
+    [SerializeField] private Material[] playerMaterials;
 
     public void OnPlayerJoined(PlayerInput player)
     {
@@ -31,5 +32,6 @@ public class PlayerManager : MonoBehaviour
         );
 
         playerScript.AssignAnimation(this.playerAnimatorController[player.playerIndex % playerAnimatorController.Length]);
+        playerScript.AssignColor(playerMaterials[player.playerIndex % playerMaterials.Length]);
     }
 }

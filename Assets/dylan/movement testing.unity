@@ -622,6 +622,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1e126a53c56f64e8ded10f88531a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpForce: 10
+  dashForce: 15
+  dashDuration: 0.2
+  dashCooldown:
+    CooldownTime: 5
+  airControl: 3
+  playerAnimatorController:
+  - {fileID: 9100000, guid: 04e64360431a2884eafa621a03caba7d, type: 2}
+  - {fileID: 9100000, guid: 07ce3932e3dedd14f9b7a4b91dde5d7d, type: 2}
+  playerMaterials:
+  - {fileID: 2100000, guid: 6ee7585eb9b9c01469e436aa665a1f76, type: 2}
+  - {fileID: 2100000, guid: 2fedde92a89a5b64699eb5fc7900a120, type: 2}
+  - {fileID: 2100000, guid: f6aec4aab7d50fd4ab5ce90f2697a737, type: 2}
+  - {fileID: 2100000, guid: 80143b6059a2fea4cab1afbcb2e8c81d, type: 2}
+  - {fileID: 2100000, guid: 5d8c7e0dae0aabb40b68f4648652b08c, type: 2}
+  - {fileID: 2100000, guid: c77ed8d467c9e83439d231e58f378033, type: 2}
 --- !u!1 &2126413392
 GameObject:
   m_ObjectHideFlags: 0
