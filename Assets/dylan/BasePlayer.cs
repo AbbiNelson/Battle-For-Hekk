@@ -132,4 +132,9 @@ public class BasePlayer : MonoBehaviour
         yield return new WaitForSeconds(dashDuration); // pause for dash duration
         rb.gravityScale = originalGravity; // restore original gravity
     }
+
+    internal void AssignAnimation(RuntimeAnimatorController runtimeAnimatorController)
+    {
+        throw new NotImplementedException();
+    }
 }
