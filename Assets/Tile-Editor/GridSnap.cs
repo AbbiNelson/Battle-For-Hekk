@@ -12,11 +12,9 @@ public class GridSnap : MonoBehaviour
 
     void Start()
     {
-        if (grid == null)
-        {
-            var go = GameObject.Find("MainGrid");
-            grid = go.GetComponent<Grid>();
-        }
+        var go = GameObject.FindWithTag("Grid");
+        // returns the first active Grid found in the scene (or null)
+        grid = go.GetComponent<Grid>();
 
         if (snapOnStart)
         {
