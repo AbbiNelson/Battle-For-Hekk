@@ -1,5 +1,6 @@
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DotThrow : MonoBehaviour
 {
@@ -8,17 +9,14 @@ public class DotThrow : MonoBehaviour
     public float cooldownTime = 5f;
     public float nextFireTime = 0f;
 
-
-    void Update()
+    public void Shoot(InputAction.CallbackContext ctx)
     {
-        if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
-        {
-            PlayerMovement playerMovement = GetComponent<PlayerMovement>();
+        if (!ctx.performed || Time.time < nextFireTime)
+            return;
 
-            Instantiate(Dot, firePosition.position, playerMovement.facingDirection == 1 ? firePosition.rotation : firePosition.rotation * Quaternion.Euler(0f, 180f, 0f));
-            nextFireTime = Time.time + cooldownTime;
-        }
+        BasePlayer basePlayer = GetComponent<BasePlayer>();
 
-
+        Instantiate(Dot, firePosition.position, firePosition.rotation);
+        nextFireTime = Time.time + cooldownTime;
     }
 }

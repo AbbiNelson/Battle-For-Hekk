@@ -30,6 +30,6 @@ public class PlayerManager : MonoBehaviour
             airControl: this.airControl
         );
 
-        playerScript.AssignAnimation(this.playerAnimatorController[player.playerIndex % playerAnimatorController.Length]);
+        // playerScript.AssignAnimation(this.playerAnimatorController[player.playerIndex % playerAnimatorController.Length]);
     }
 }
