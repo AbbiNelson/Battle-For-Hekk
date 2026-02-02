@@ -6,9 +6,11 @@ public class PlayerSelection : MonoBehaviour
     public Rigidbody2D rb2d;
     public float speed = 15f;
     public PlayerHandler pH;
+    public GameManager GM;
     void Start()
     {
-        pH = GameObject.Find("PlayerHandler").GetComponent<PlayerHandler>();
+        GM = GameObject.FindWithTag("Master").GetComponent<GameManager>();
+        pH = GameObject.FindWithTag("PlayerHandler").GetComponent<PlayerHandler>();
         rb2d = GetComponent<Rigidbody2D>();
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         pH.SelectSprite();
@@ -21,5 +23,9 @@ public class PlayerSelection : MonoBehaviour
     }
     public void Interact() { 
     
+    }
+    public void OnDestroy()
+    {
+        
     }
 }

@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class NewTile : MonoBehaviour
 {
     public GameObject tile;
+    public GameManager GM;
 
-
-    void Update()
+    void Start()
     {
+        GameObject GMO = GameObject.FindWithTag("Master");
+        GM = GMO.GetComponent<GameManager>();
     }
 
     // Called by the Input System action; wire this in your InputAction (performed)
@@ -24,6 +26,8 @@ public class NewTile : MonoBehaviour
 
 
         Debug.Log($"NewTile: Parented '{tile.name}' to '{name}'.");
+        GM.PlayerSelection += 1;
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

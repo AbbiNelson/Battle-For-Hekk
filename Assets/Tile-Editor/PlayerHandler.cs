@@ -20,6 +20,7 @@ public class PlayerHandler : MonoBehaviour
                 var input = managerinput.JoinPlayer(pairWithDevice: device);
             }
         }
+
     }
 
     // Update is called once per frame
