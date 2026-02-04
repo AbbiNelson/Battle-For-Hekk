@@ -182,8 +182,5 @@ public class BasePlayer : MonoBehaviour
         rb.gravityScale = originalGravity; // restore original gravity
     }
 
-    internal void AssignAnimation(RuntimeAnimatorController runtimeAnimatorController)
-    {
-        throw new NotImplementedException();
-    }
+    
 }
