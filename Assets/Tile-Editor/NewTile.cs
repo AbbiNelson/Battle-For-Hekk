@@ -7,6 +7,7 @@ public class NewTile : MonoBehaviour
 {
     public GameObject tile;
     public GameManager GM;
+    public bool selected = false;
 
     void Start()
     {
@@ -17,25 +18,36 @@ public class NewTile : MonoBehaviour
     // Called by the Input System action; wire this in your InputAction (performed)
     public void Interact(InputAction.CallbackContext ctx)
     {
-        if (tile == null)
-            return;
 
-        tile.transform.SetParent(transform, false);
-        tile.transform.localPosition = Vector3.zero;
-        tile.transform.localRotation = Quaternion.identity;
+        if (GM.inTileSelection)
+        {
+            tile.transform.SetParent(transform, false);
+            tile.transform.localPosition = Vector3.zero;
+            tile.transform.localRotation = Quaternion.identity;
+            selected = true;
+            if (tile == null)
+                return;
+            Debug.Log($"NewTile: Parented '{tile.name}' to '{name}'.");
+            GM.PlayerSelection += 1;
+        }
+        else { 
+
+            tile.transform.SetParent(null);
+        }
 
 
-        Debug.Log($"NewTile: Parented '{tile.name}' to '{name}'.");
-        GM.PlayerSelection += 1;
+
 
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        tile = other.gameObject;
+        if(!selected)
+            tile = other.gameObject;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if(!selected)    
             tile = null;
     }
 }
