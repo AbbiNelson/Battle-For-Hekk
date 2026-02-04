@@ -11,4 +11,8 @@ public class WinnerOPtions : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void chrSelect()
+    {
+        SceneManager.LoadScene("characterSel");
+    }
 }
