@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class MolotovThrow : MonoBehaviour
 {
+    public AudioSource Fireball;
     public Transform firePosition;
     public GameObject Molotov;
     public float cooldownTime = 5f;
@@ -12,6 +13,7 @@ public class MolotovThrow : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext ctx)
     {
+        Fireball.Play();
         if (!ctx.performed || Time.time < nextFireTime)
             return;
 
