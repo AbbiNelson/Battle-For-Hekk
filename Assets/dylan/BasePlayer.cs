@@ -111,21 +111,22 @@ public class BasePlayer : MonoBehaviour
 
     private bool IsGrounded()
     {
-        if (rb.linearVelocityY > 0)
+        if (rb.linearVelocityY > 1f) // 1f instead of 0f for better jump responsiveness
         {
+            print("meow");
             return false; // if moving upwards, not grounded
         }
-
+         
         // Implement ground check logic here
-        Collider2D[] bottomCollisions = Physics2D.OverlapCircleAll(transform.position
-                                                                + 1.3f * Vector3.down, 0.3f);
+        RaycastHit2D[] bottomCollisions = Physics2D.BoxCastAll(transform.position + 1.5f * Vector3.down,
+                                                               new Vector2(1.1f, 0.2f), 0, Vector2.zero);
 
         Debug.DrawLine(transform.position, transform.position + 1.5f * Vector3.down, Color.red);
 
 
         foreach (var collision in bottomCollisions)
         {
-            if (collision != coll)
+            if (collision.collider != coll)
             {
                 return true;
             }
