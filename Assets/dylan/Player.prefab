@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1190720791592999131}
   - component: {fileID: 5530722516857764658}
   - component: {fileID: 4950292725093983916}
-  - component: {fileID: 6555317088723412461}
   - component: {fileID: 6628167640012070207}
   - component: {fileID: 5553867022318329763}
   - component: {fileID: 1372215100646856398}
@@ -166,43 +165,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2.4}
   m_EdgeRadius: 0
---- !u!70 &6555317088723412461
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5262018748184389022}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 3}
-  m_Direction: 0
 --- !u!114 &6628167640012070207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +205,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 15d3b477-55de-4429-8ff7-2e91c4478dbb
-    m_ActionName: 'Player/Move[/XInputControllerWindows/leftStick]'
+    m_ActionName: 'Player/Move[/XInputControllerWindows/leftStick,/XInputControllerWindows1/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5553867022318329763}
@@ -259,7 +221,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 8f35287f-d64f-4366-ae8e-fe3a39645f5e
-    m_ActionName: 'Player/Jump[/XInputControllerWindows/buttonSouth]'
+    m_ActionName: 'Player/Jump[/XInputControllerWindows/buttonSouth,/XInputControllerWindows1/buttonSouth,/Keyboard/space]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5553867022318329763}
@@ -275,7 +237,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: feb4ba22-723e-423c-bf43-432b3a872376
-    m_ActionName: 'Player/Dash[/XInputControllerWindows/leftTrigger,/XInputControllerWindows/rightTrigger]'
+    m_ActionName: 'Player/Dash[/XInputControllerWindows/leftTrigger,/XInputControllerWindows1/leftTrigger,/XInputControllerWindows/rightTrigger,/XInputControllerWindows1/rightTrigger,/Keyboard/shift]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
