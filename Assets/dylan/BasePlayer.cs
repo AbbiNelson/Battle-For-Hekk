@@ -29,6 +29,10 @@ public class Cooldown
 
 public class BasePlayer : MonoBehaviour
 {
+    float horizontalInput;
+
+    public int facingDirection = 1;
+
     private Rigidbody2D rb;
     private Collider2D coll;
     private Animator anim;
@@ -89,6 +93,28 @@ public class BasePlayer : MonoBehaviour
         {
             rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, moveInput.x * moveSpeed, airControl * Time.deltaTime); // reduced air control with smoothing
         }
+
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+
+        if (horizontalInput > .1f && facingDirection < 0)
+        {
+            Flip();
+        }
+        else if (horizontalInput < -.1f && facingDirection > 0)
+        {
+            Flip();
+        }
+
+        void Flip()
+        {
+            facingDirection *= -1;
+
+            Vector3 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
+
+
     }
 
     private void LateUpdate()
@@ -117,15 +143,15 @@ public class BasePlayer : MonoBehaviour
         }
 
         // Implement ground check logic here
-        Collider2D[] bottomCollisions = Physics2D.OverlapCircleAll(transform.position
-                                                                + 1.3f * Vector3.down, 0.3f);
+        RaycastHit2D[] bottomCollisions = Physics2D.BoxCastAll(transform.position
+                                                             + 1.5f * Vector3.down, new Vector2(1f, 0.2f), 0f, Vector2.zero);
 
         Debug.DrawLine(transform.position, transform.position + 1.5f * Vector3.down, Color.red);
 
 
         foreach (var collision in bottomCollisions)
         {
-            if (collision != coll)
+            if (collision.collider != coll)
             {
                 return true;
             }
@@ -175,15 +201,10 @@ public class BasePlayer : MonoBehaviour
         rb.gravityScale = 0; // disable gravity during dash
 
         // determine dash direction (if not pressing anything, base it off previously pressed horizontal direction)
-        Vector2 dashDirection = new Vector2(Mathf.Sign(moveInput.x) != 0 ? Mathf.Sign(moveInput.x) : transform.localScale.x, 0).normalized;
+        Vector2 dashDirection = new Vector2(transform.localScale.x, 0).normalized;
         rb.linearVelocity = dashDirection * dashForce;
 
         yield return new WaitForSeconds(dashDuration); // pause for dash duration
         rb.gravityScale = originalGravity; // restore original gravity
-    }
-
-    internal void AssignAnimation(RuntimeAnimatorController runtimeAnimatorController)
-    {
-        throw new NotImplementedException();
     }
 }
