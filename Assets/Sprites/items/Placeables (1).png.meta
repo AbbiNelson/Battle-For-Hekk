@@ -360,7 +360,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Placeables (1)_0: 329392308343860239
+      Placeables (1)_1: -5292748383917219360
+      Placeables (1)_2: 7213029177699678196
+      Placeables (1)_3: 7214349041431544624
+      Placeables (1)_4: -3159042991653864339
+      Placeables (1)_5: 5520685723136456671
+      Placeables (1)_6: 2573049642750088350
+      Placeables (1)_7: 3491016139394111371
+      Placeables (1)_8: 7913392206450924268
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

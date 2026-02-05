@@ -6,7 +6,7 @@ public class ApplySmallBurn : MonoBehaviour
     {
         if (other.GetComponent<StatusEffectManager>() != null)
         {
-            other.GetComponent<StatusEffectManager>().ApplyBurn(3);
+            other.GetComponent<StatusEffectManager>().ApplyBurn(4);
         }
        
     }
