@@ -1070,9 +1070,9 @@ MonoBehaviour:
     CooldownTime: 2
   airControl: 3
   playerAnimatorController:
+  - {fileID: 9100000, guid: 07ce3932e3dedd14f9b7a4b91dde5d7d, type: 2}
   - {fileID: 9100000, guid: 2c418b6892e57384fb2c68a7c4042981, type: 2}
   - {fileID: 9100000, guid: 04e64360431a2884eafa621a03caba7d, type: 2}
-  - {fileID: 9100000, guid: 07ce3932e3dedd14f9b7a4b91dde5d7d, type: 2}
   playerMaterials:
   - {fileID: 2100000, guid: 6ee7585eb9b9c01469e436aa665a1f76, type: 2}
   - {fileID: 2100000, guid: 2fedde92a89a5b64699eb5fc7900a120, type: 2}
