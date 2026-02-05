@@ -434,6 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43a441102c301d4cb0ec595e87db79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fireball: {fileID: -355889364746921394}
   firePosition: {fileID: 6684428169422428474}
   Molotov: {fileID: 1064304261947391618, guid: 99c33f3febc9c50479b7eee1ef095c84, type: 3}
   cooldownTime: 2

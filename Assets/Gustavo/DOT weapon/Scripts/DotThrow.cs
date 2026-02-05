@@ -12,11 +12,14 @@ public class DotThrow : MonoBehaviour
     public void Shoot(InputAction.CallbackContext ctx)
     {
         if (!ctx.performed || Time.time < nextFireTime)
+        {
             return;
+        }
 
         BasePlayer basePlayer = GetComponent<BasePlayer>();
 
-        Instantiate(Dot, firePosition.position, basePlayer.facingDirection == 1 ? firePosition.rotation : firePosition.rotation * Quaternion.Euler(0f, 180f, 0f));
+        Instantiate(Dot, firePosition.position, firePosition.rotation);
         nextFireTime = Time.time + cooldownTime;
+        
     }
 }

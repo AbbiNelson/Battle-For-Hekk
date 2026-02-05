@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class MolotovThrow : MonoBehaviour
 {
+    public AudioSource Fireball;
     public Transform firePosition;
     public GameObject Molotov;
     public float cooldownTime = 5f;
@@ -15,6 +16,7 @@ public class MolotovThrow : MonoBehaviour
         if (!ctx.performed || Time.time < nextFireTime)
             return;
 
+        Fireball.Play();
         BasePlayer basePlayer = GetComponent<BasePlayer>();
 
         Instantiate(Molotov, firePosition.position, basePlayer.facingDirection == 1 ? firePosition.rotation : firePosition.rotation * Quaternion.Euler(0f, 180f, 0f));
