@@ -61,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -99,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -154,11 +154,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 111
+        y: 112
         width: 17
-        height: 17
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -176,11 +176,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 63
+        y: 64
         width: 17
-        height: 49
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: Placeables (1)_2
       rect:
         serializedVersion: 2
-        x: 17
-        y: 63
-        width: 34
-        height: 65
+        x: 18
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -219,12 +219,12 @@ TextureImporter:
       name: Placeables (1)_3
       rect:
         serializedVersion: 2
-        x: 54
-        y: 63
-        width: 34
-        height: 65
+        x: 55
+        y: 64
+        width: 32
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -241,12 +241,12 @@ TextureImporter:
       name: Placeables (1)_4
       rect:
         serializedVersion: 2
-        x: 87
-        y: 63
-        width: 34
-        height: 65
+        x: 88
+        y: 64
+        width: 32
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -268,7 +268,7 @@ TextureImporter:
         width: 61
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -290,7 +290,7 @@ TextureImporter:
         width: 65
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -307,12 +307,12 @@ TextureImporter:
       name: Placeables (1)_7
       rect:
         serializedVersion: 2
-        x: 64
-        y: 11
-        width: 17
-        height: 6
+        x: 18
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -329,12 +329,12 @@ TextureImporter:
       name: Placeables (1)_8
       rect:
         serializedVersion: 2
-        x: 120
-        y: 9
-        width: 8
-        height: 8
+        x: 18
+        y: 80
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -351,7 +351,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bc989035d711d7249b04669bc1c1e18a
     internalID: 0
     vertices: []
     indices: 
