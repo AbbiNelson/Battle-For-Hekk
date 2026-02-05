@@ -37,6 +37,9 @@ public class NewTile : MonoBehaviour
             {
                 tile.transform.SetParent(go.transform, true);
                 GM.PlayerSelection -= 1;
+                tile = null;
+                selected = false;
+
             }
         }
 
