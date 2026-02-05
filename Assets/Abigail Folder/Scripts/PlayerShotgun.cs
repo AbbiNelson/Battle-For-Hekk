@@ -21,8 +21,7 @@ public class PlayerShotgun : MonoBehaviour
     private float angle;
     private void Update()
     {
-        HandleGunRotation();
-        HandleGunShooting();
+       
         timeLeft -= Time.deltaTime;
         
     }
@@ -32,9 +31,9 @@ public class PlayerShotgun : MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce(-direction * recoilForce);
     }
 
-    private void HandleGunShooting()
+    public void HandleGunShooting(InputAction.CallbackContext ctx)
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame && timeLeft <= 0f)
+        if (ctx.started && timeLeft <= 0f)
         {
             for (int i = 0; i < bulletSpawnPoint.Length; i++)
             {
@@ -46,25 +45,19 @@ public class PlayerShotgun : MonoBehaviour
         }
     }
 
-    private void HandleGunRotation()
+    public void HandleGunRotationMouse(InputAction.CallbackContext ctx)
     {
-        worldPosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        worldPosition = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>());
         direction = (worldPosition - (Vector2)gun.transform.position).normalized;
         gun.transform.right = direction;
 
-        Vector3 localScale = Vector3.one;
-
-        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        if(angle > 90 || angle < -90)
-        {
-            localScale.y = -1f;
-        }
-        else
-        {
-            localScale.y = 1f;
-        }
-
-        gun.transform.localScale = localScale;
     }    
+
+    public void HandleGunRotationGamepad(InputAction.CallbackContext ctx)
+    {
+        if (ctx.ReadValue<Vector2>() != Vector2.zero)
+        {
+            gun.transform.right = ctx.ReadValue<Vector2>().normalized;
+        }
+    }
 }
