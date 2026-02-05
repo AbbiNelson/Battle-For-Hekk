@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Update works.");
         if (PlayerCount <= 1) {
             Arena.SetActive(false);
             TileSelection.SetActive(true);

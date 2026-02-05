@@ -8,33 +8,37 @@ public class NewTile : MonoBehaviour
     public GameObject tile;
     public GameManager GM;
     public bool selected = false;
+    public GameObject go;
 
     void Start()
     {
         GameObject GMO = GameObject.FindWithTag("Master");
         GM = GMO.GetComponent<GameManager>();
+        go = GameObject.FindWithTag("Grid");
     }
 
     // Called by the Input System action; wire this in your InputAction (performed)
     public void Interact(InputAction.CallbackContext ctx)
     {
-
-        if (GM.inTileSelection)
+        if (ctx.started)
         {
-            tile.transform.SetParent(transform, false);
-            tile.transform.localPosition = Vector3.zero;
-            tile.transform.localRotation = Quaternion.identity;
-            selected = true;
-            if (tile == null)
-                return;
-            Debug.Log($"NewTile: Parented '{tile.name}' to '{name}'.");
-            GM.PlayerSelection += 1;
+            if (GM.inTileSelection)
+            {
+                tile.transform.SetParent(transform, false);
+                tile.transform.localPosition = Vector3.zero;
+                tile.transform.localRotation = Quaternion.identity;
+                selected = true;
+                if (tile == null)
+                    return;
+                Debug.Log($"NewTile: Parented '{tile.name}' to '{name}'.");
+                GM.PlayerSelection += 1;
+            }
+            else
+            {
+                tile.transform.SetParent(go.transform, true);
+                GM.PlayerSelection -= 1;
+            }
         }
-        else { 
-
-            tile.transform.SetParent(null);
-        }
-
 
 
 
