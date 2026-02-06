@@ -1,0 +1,694 @@
+fileFormatVersion: 2
+guid: dc12514428359c949a83aa4d0070cb28
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5421226421449347420
+    second: jimmy_idle_0
+  - first:
+      213: 4556033637373221886
+    second: jimmy_idle_1
+  - first:
+      213: -6484631587116453090
+    second: jimmy_idle_2
+  - first:
+      213: 3063238416396594937
+    second: jimmy_idle_3
+  - first:
+      213: -8653890158413218756
+    second: jimmy_idle_4
+  - first:
+      213: 1001085779173010600
+    second: jimmy_idle_5
+  - first:
+      213: 5769738757579339958
+    second: jimmy_idle_6
+  - first:
+      213: 1554054365639209270
+    second: jimmy_idle_7
+  - first:
+      213: 5514075798934654578
+    second: jimmy_idle_8
+  - first:
+      213: 6705534705544677184
+    second: jimmy_idle_9
+  - first:
+      213: 2664978079784130684
+    second: jimmy_idle_10
+  - first:
+      213: 2635714250175379109
+    second: jimmy_idle_11
+  - first:
+      213: -2292992875676271720
+    second: jimmy_idle_12
+  - first:
+      213: -5953244772772430537
+    second: jimmy_idle_13
+  - first:
+      213: 3685657370021133027
+    second: jimmy_idle_14
+  - first:
+      213: -3507734262139199706
+    second: jimmy_idle_15
+  - first:
+      213: -6408185788300622215
+    second: jimmy_idle_16
+  - first:
+      213: 6031374333658498123
+    second: jimmy_idle_17
+  - first:
+      213: 6002184548842216320
+    second: jimmy_idle_18
+  - first:
+      213: 8152917359081187497
+    second: jimmy_idle_19
+  - first:
+      213: 3802134096612376002
+    second: jimmy_idle_20
+  - first:
+      213: -8640293243532274462
+    second: jimmy_idle_21
+  - first:
+      213: -1111302967261892365
+    second: jimmy_idle_22
+  - first:
+      213: -5438421595931380756
+    second: jimmy_idle_23
+  - first:
+      213: 5934470679664988108
+    second: jimmy_idle_24
+  - first:
+      213: -6437553433192492907
+    second: jimmy_idle_25
+  - first:
+      213: -156844005920385785
+    second: jimmy_idle_26
+  - first:
+      213: -3456647884207735536
+    second: jimmy_idle_27
+  - first:
+      213: -3533859772719806329
+    second: jimmy_idle_28
+  - first:
+      213: 3467706940358465415
+    second: jimmy_idle_29
+  - first:
+      213: -1235556165040035389
+    second: jimmy_idle_30
+  - first:
+      213: 6633500576700644517
+    second: jimmy_idle_31
+  - first:
+      213: -8372850275297118017
+    second: jimmy_idle_32
+  - first:
+      213: 4789346283809979623
+    second: jimmy_idle_33
+  - first:
+      213: -1491993790596765305
+    second: jimmy_idle_34
+  - first:
+      213: -6447138233811061070
+    second: jimmy_idle_35
+  - first:
+      213: -3725322808195073722
+    second: jimmy_idle_36
+  - first:
+      213: 9052541940353932480
+    second: jimmy_idle_37
+  - first:
+      213: -8594183416569733578
+    second: jimmy_idle_38
+  - first:
+      213: 7945328608868652550
+    second: jimmy_idle_39
+  - first:
+      213: -1782972334496128114
+    second: jimmy_idle_40
+  - first:
+      213: 5845794644068191495
+    second: jimmy_idle_41
+  - first:
+      213: -1719606615958921056
+    second: jimmy_idle_42
+  - first:
+      213: 6294511763690329993
+    second: jimmy_idle_43
+  - first:
+      213: -2522970794792708
+    second: jimmy_idle_44
+  - first:
+      213: 8914784698292240
+    second: jimmy_idle_45
+  - first:
+      213: 5513062102491237754
+    second: jimmy_idle_46
+  - first:
+      213: -5731343898238290844
+    second: jimmy_idle_47
+  - first:
+      213: -2678237425748036510
+    second: jimmy_idle_48
+  - first:
+      213: -5701778737090513920
+    second: jimmy_idle_49
+  - first:
+      213: -3275554314575061516
+    second: jimmy_idle_50
+  - first:
+      213: -3652349414966425923
+    second: jimmy_idle_51
+  - first:
+      213: 5138613186941369557
+    second: jimmy_idle_52
+  - first:
+      213: 4167136810863939933
+    second: jimmy_idle_53
+  - first:
+      213: 8891316897080018631
+    second: jimmy_idle_54
+  - first:
+      213: -7717514823169217462
+    second: jimmy_idle_55
+  - first:
+      213: 4867017373415573860
+    second: jimmy_idle_56
+  - first:
+      213: 4003043173683661759
+    second: jimmy_idle_57
+  - first:
+      213: -5321089329556977692
+    second: jimmy_idle_58
+  - first:
+      213: 438979239367179159
+    second: jimmy_idle_59
+  - first:
+      213: 1367457602047782043
+    second: jimmy_idle_60
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jimmy_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aeac86ea4fe3c4b0800000000000000
+      internalID: -5421226421449347420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb9c5c44784a3f30800000000000000
+      internalID: 4556033637373221886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1375a6bde5f106a0800000000000000
+      internalID: -6484631587116453090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe26a72c1fc28a20800000000000000
+      internalID: 3063238416396594937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3cf78e40c437e780800000000000000
+      internalID: -8653890158413218756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ac6d41563294ed00800000000000000
+      internalID: 1001085779173010600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b8f154a4da321050800000000000000
+      internalID: 5769738757579339958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 631f199363c119510800000000000000
+      internalID: 1554054365639209270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e041c69bee58c40800000000000000
+      internalID: 5514075798934654578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0474b098948de0d50800000000000000
+      internalID: 6705534705544677184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c785cb3a177ebf420800000000000000
+      internalID: 2664978079784130684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a6732b5520f39420800000000000000
+      internalID: 2635714250175379109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b70dcd027ad20e0800000000000000
+      internalID: -2292992875676271720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73db2f9bb63d16da0800000000000000
+      internalID: -5953244772772430537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eaf8efb9d5162330800000000000000
+      internalID: 3685657370021133027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jimmy_idle_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.67, y: 0.375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62fd9baf546025fc0800000000000000
+      internalID: -3507734262139199706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1ea76292fc94a32498132c1f12ac2e1d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      jimmy_idle_0: -5421226421449347420
+      jimmy_idle_1: 4556033637373221886
+      jimmy_idle_10: 2664978079784130684
+      jimmy_idle_11: 2635714250175379109
+      jimmy_idle_12: -2292992875676271720
+      jimmy_idle_13: -5953244772772430537
+      jimmy_idle_14: 3685657370021133027
+      jimmy_idle_15: -3507734262139199706
+      jimmy_idle_2: -6484631587116453090
+      jimmy_idle_3: 3063238416396594937
+      jimmy_idle_4: -8653890158413218756
+      jimmy_idle_5: 1001085779173010600
+      jimmy_idle_6: 5769738757579339958
+      jimmy_idle_7: 1554054365639209270
+      jimmy_idle_8: 5514075798934654578
+      jimmy_idle_9: 6705534705544677184
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

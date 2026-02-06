@@ -5,11 +5,11 @@ using UnityEngine.InputSystem;
 public class PlayerManager : MonoBehaviour
 {
     [Header("Player Settings")]
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private float moveSpeed = 8f;
+    [SerializeField] private float jumpForce = 12f;
     [SerializeField] private float dashForce = 15f;
     [SerializeField] private float dashDuration = 0.2f;
-    [SerializeField] private Cooldown dashCooldown = new(5f);
+    [SerializeField] private Cooldown dashCooldown = new(2f);
     [SerializeField] private float airControl = 3f;
 
     [SerializeField] private RuntimeAnimatorController[] playerAnimatorController;
