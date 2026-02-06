@@ -207,9 +207,4 @@ public class BasePlayer : MonoBehaviour
         yield return new WaitForSeconds(dashDuration); // pause for dash duration
         rb.gravityScale = originalGravity; // restore original gravity
     }
-<<<<<<< HEAD
-
-    
-=======
->>>>>>> f94231fe85994bf1400de2c406a9748d5bc6e824
 }
