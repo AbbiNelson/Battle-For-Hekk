@@ -108,9 +108,21 @@ public class BasePlayer : MonoBehaviour
             Vector3 scale = transform.localScale;
             scale.x *= -1;
             transform.localScale = scale;
+
+            if (transform.childCount > 0 && transform.GetChild(0).TryGetComponent(out SpriteRenderer sr))
+            {
+                if (facingDirection < 0)
+                {
+                    sr.flipX = true;
+                    sr.flipY = true;
+                }
+                else
+                {
+                    sr.flipX = false;
+                    sr.flipY = false;
+                }
+            }
         }
-
-
     }
 
     private void LateUpdate()
