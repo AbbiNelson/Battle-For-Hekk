@@ -27,14 +27,16 @@ public class NewTile : MonoBehaviour
                 tile.transform.SetParent(transform, false);
                 tile.transform.localPosition = Vector3.zero;
                 tile.transform.localRotation = Quaternion.identity;
-                selected = true;
+
                 if (tile == null)
                     return;
                 Debug.Log($"NewTile: Parented '{tile.name}' to '{name}'.");
                 GM.PlayerSelection += 1;
+                selected = true;
             }
             else
             {
+                go = GameObject.FindWithTag("Grid");
                 tile.transform.SetParent(go.transform, true);
                 GM.PlayerSelection -= 1;
                 tile = null;

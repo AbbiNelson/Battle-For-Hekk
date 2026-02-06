@@ -207,11 +207,11 @@ GameObject:
   - component: {fileID: 662862264}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Grid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!156049354 &662862264
 Grid:
   m_ObjectHideFlags: 0
@@ -250,6 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 669430024}
   - component: {fileID: 669430025}
+  - component: {fileID: 669430026}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Master
@@ -284,12 +285,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8da6def6bbdc5140a64f150f434e661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arena: {fileID: 662862263}
+  Arena: {fileID: 1528216808}
   TileSelection: {fileID: 1508555931}
   PlayerSelection: 0
   DCount: 0
   PlayerCount: 0
   inTileSelection: 0
+--- !u!114 &669430026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669430023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43da656587e8dc439451546b419b0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &961449022
 GameObject:
   m_ObjectHideFlags: 0
@@ -15603,7 +15616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1528216809
 Transform:
   m_ObjectHideFlags: 0

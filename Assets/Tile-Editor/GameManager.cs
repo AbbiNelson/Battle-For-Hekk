@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
         }
         if (PlayerSelection == DCount) {
             Arena.SetActive(true);
+            Arena.GetComponent<TilemapCollider2D>().enabled = false;
             TileSelection.SetActive(false);
             inTileSelection = false;
         }

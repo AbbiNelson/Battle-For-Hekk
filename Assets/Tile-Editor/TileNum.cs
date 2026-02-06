@@ -16,6 +16,7 @@ public class TileNum : MonoBehaviour
 
     private void Awake()
     {
+        ClearGeneratedTiles();
         TileGen();
     }
 
@@ -45,14 +46,17 @@ public class TileNum : MonoBehaviour
     // Call this to destroy all generated tiles and clear the array
     public void ClearGeneratedTiles()
     {
-        for (int i = 0; i < tileList.Length; i++)
+        //destroy any remaining children of this transform
+        for (int i = transform.childCount - 1; i >= 0; i--)
         {
-            if (tileList[i] != null)
-                Destroy(tileList[i]);
-
-            tileList[i] = null;
+            var child = transform.GetChild(i).gameObject;
+            if (child != null)
+                Destroy(child);
         }
 
+        // Reset the array
         tileList = new GameObject[0];
+
+        Debug.Log("ClearGeneratedTiles: destroyed generated tiles and cleared tileList.");
     }
 }
