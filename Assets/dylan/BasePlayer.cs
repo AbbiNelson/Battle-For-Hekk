@@ -29,8 +29,6 @@ public class Cooldown
 
 public class BasePlayer : MonoBehaviour
 {
-    float horizontalInput;
-
     public int facingDirection = 1;
 
     private Rigidbody2D rb;
@@ -94,13 +92,11 @@ public class BasePlayer : MonoBehaviour
             rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, moveInput.x * moveSpeed, airControl * Time.deltaTime); // reduced air control with smoothing
         }
 
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-
-        if (horizontalInput > .1f && facingDirection < 0)
+        if (moveInput.x > .1f && facingDirection < 0)
         {
             Flip();
         }
-        else if (horizontalInput < -.1f && facingDirection > 0)
+        else if (moveInput.x < -.1f && facingDirection > 0)
         {
             Flip();
         }
