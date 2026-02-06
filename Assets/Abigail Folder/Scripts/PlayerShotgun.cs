@@ -15,6 +15,7 @@ public class PlayerShotgun : MonoBehaviour
     public float recoilForce = 5f;
     private float timeLeft;
     public float resetTime;
+    public AudioSource Shoot;
 
     private Vector2 worldPosition;
     private Vector2 direction;
@@ -40,7 +41,7 @@ public class PlayerShotgun : MonoBehaviour
                 bulletInst = Instantiate(bullet, bulletSpawnPoint[i].position, gun.transform.rotation);
                 Recoil();
             }
-
+            Shoot.Play();
             timeLeft = resetTime;
         }
     }

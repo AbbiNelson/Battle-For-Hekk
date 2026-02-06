@@ -1,16 +1,17 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 [Serializable]
-public class Cooldown
+public class Cooldown2
 {
     [SerializeField] private float CooldownTime;
     private float lastUsedTime;
 
     // constructor (initialization)
-    public Cooldown(float cooldownTime)
+    public Cooldown2(float cooldownTime)
     {
         CooldownTime = cooldownTime;
         lastUsedTime = -cooldownTime; // initialize to allow immediate use
@@ -27,9 +28,11 @@ public class Cooldown
     }
 }
 
-public class BasePlayer : MonoBehaviour
+public class BasePlayer2 : MonoBehaviour
 {
     float horizontalInput;
+
+    private InputActionReference pointerPosition;
 
     public int facingDirection = 1;
 
@@ -37,7 +40,9 @@ public class BasePlayer : MonoBehaviour
     private Collider2D coll;
     private Animator anim;
 
-    private Vector2 moveInput;
+    private WeaponParent weaponParent;
+
+    private Vector2 moveInput, pointerInput;
     private bool doubleJumpAvailable = true;
 
     private float moveSpeed = 5f;
@@ -75,6 +80,7 @@ public class BasePlayer : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
+        weaponParent = GetComponentInChildren<WeaponParent>();
     }
 
     void Update()
@@ -94,29 +100,24 @@ public class BasePlayer : MonoBehaviour
             rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, moveInput.x * moveSpeed, airControl * Time.deltaTime); // reduced air control with smoothing
         }
 
-        horizontalInput = Input.GetAxisRaw("Horizontal");
+        
 
-        if (horizontalInput > .1f && facingDirection < 0)
-        {
-            Flip();
-        }
-        else if (horizontalInput < -.1f && facingDirection > 0)
-        {
-            Flip();
-        }
-
-        void Flip()
-        {
-            facingDirection *= -1;
-
-            Vector3 scale = transform.localScale;
-            scale.x *= -1;
-            transform.localScale = scale;
-        }
-
+        pointerInput = GetPointerInput();
+        weaponParent.Pointerposition = pointerInput;
 
     }
 
+   
+    
+    private Vector2 GetPointerInput()
+    {
+        Vector3 mousePos = pointerPosition.action.ReadValue<Vector2>();
+        mousePos.z = Camera.main.nearClipPlane;
+        return Camera.main.ScreenToWorldPoint(mousePos);
+    }
+    
+    
+    
     private void LateUpdate()
     {
         if (rb.linearVelocityX > 0)
@@ -207,9 +208,4 @@ public class BasePlayer : MonoBehaviour
         yield return new WaitForSeconds(dashDuration); // pause for dash duration
         rb.gravityScale = originalGravity; // restore original gravity
     }
-<<<<<<< HEAD
-
-    
-=======
->>>>>>> f94231fe85994bf1400de2c406a9748d5bc6e824
 }

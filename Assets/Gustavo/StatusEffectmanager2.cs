@@ -3,12 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StatusEffectManager : MonoBehaviour
+public class StatusEffectManager2 : MonoBehaviour
 {
     private Health healthScript;
 
     public List<int> poisonTickTimers = new List<int>();
     public List<int> burnTickTimers = new List<int>();
+
+    // Prefab to attach when burn is active (set in Inspector)
+    [SerializeField] private GameObject ouchieBurnPrefab;
+
+    // Runtime instance of the ouchie burn effect
+    private GameObject activeOuchieBurnInstance;
+
+    // Track running coroutines so we don't start duplicates
+    private Coroutine burnCoroutine;
+    private Coroutine poisonCoroutine;
+
+
+
     private void Start()
     {
         healthScript = GetComponent<Health>();
@@ -16,7 +29,7 @@ public class StatusEffectManager : MonoBehaviour
 
     public void ApplyPoison(int ticks)
     {
-        if(poisonTickTimers.Count <= 0)
+        if (poisonTickTimers.Count <= 0)
         {
             poisonTickTimers.Add(ticks);
             StartCoroutine(Poison());
@@ -26,17 +39,17 @@ public class StatusEffectManager : MonoBehaviour
             poisonTickTimers.Add(ticks);
         }
 
-    
+
     }
 
     IEnumerator Poison()
     {
-        while(poisonTickTimers.Count > 0)
+        while (poisonTickTimers.Count > 0)
         {
-            for(int i = 0; i < poisonTickTimers.Count; i++)
+            for (int i = 0; i < poisonTickTimers.Count; i++)
             {
                 poisonTickTimers[i]--;
-                
+
             }
             healthScript.health -= 5;
             poisonTickTimers.RemoveAll(i => i == 0);
@@ -46,7 +59,7 @@ public class StatusEffectManager : MonoBehaviour
 
     public void ApplyBurn(int ticks)
     {
-        if(burnTickTimers.Count <= 0)
+        if (burnTickTimers.Count <= 0)
         {
             burnTickTimers.Add(ticks);
             StartCoroutine(Burn());
@@ -55,6 +68,14 @@ public class StatusEffectManager : MonoBehaviour
         {
             burnTickTimers.Add(ticks);
         }
+
+        if (activeOuchieBurnInstance == null && ouchieBurnPrefab != null)
+        {
+            activeOuchieBurnInstance = Instantiate(ouchieBurnPrefab, transform);
+            activeOuchieBurnInstance.transform.localPosition = Vector3.zero;
+        }
+
+
     }
 
 
@@ -71,5 +92,15 @@ public class StatusEffectManager : MonoBehaviour
             burnTickTimers.RemoveAll(i => i == 0);
             yield return new WaitForSeconds(0.75f);
         }
+
+        if (activeOuchieBurnInstance != null)
+        {
+            Destroy(activeOuchieBurnInstance);
+            activeOuchieBurnInstance = null;
+        }
+
+        burnCoroutine = null;
+
+
     }
 }
