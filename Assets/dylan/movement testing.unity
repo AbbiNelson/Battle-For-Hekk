@@ -1279,13 +1279,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2083397417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d1e126a53c56f64e8ded10f88531a3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d71f8a01d2f15440b6c5889c187b923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 8
   jumpForce: 12
   dashForce: 15
-  dashDuration: 0.2
+  dashDuration: 0.3
   dashCooldown:
     CooldownTime: 2
   airControl: 3
