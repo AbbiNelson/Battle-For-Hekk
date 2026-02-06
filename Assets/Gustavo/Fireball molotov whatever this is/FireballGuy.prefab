@@ -196,7 +196,7 @@ Transform:
   m_GameObject: {fileID: 4552477211363427277}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0009969457, y: 0.0009775625, z: -0.700131, w: 0.7140131}
-  m_LocalPosition: {x: -0.01, y: 0.01, z: 0}
+  m_LocalPosition: {x: 0.07, y: -0.46, z: 0}
   m_LocalScale: {x: 0.6570499, y: 0.16233, z: 0.64645004}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -309,13 +309,15 @@ GameObject:
   - component: {fileID: 7421223411275917582}
   - component: {fileID: 2263720941500067235}
   - component: {fileID: 6341221117382042068}
-  - component: {fileID: 38489876133204626}
   - component: {fileID: 9104736109438555870}
   - component: {fileID: 1674846584089543431}
   - component: {fileID: 4154304704433748066}
   - component: {fileID: 4451291101501024985}
   - component: {fileID: -4406997215401250829}
   - component: {fileID: 3446422492940936955}
+  - component: {fileID: -1364476610369077761}
+  - component: {fileID: 6275719042474070778}
+  - component: {fileID: -7801199883473242698}
   m_Layer: 0
   m_Name: FireballGuy
   m_TagString: Player
@@ -384,8 +386,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.8301887, g: 0.4782467, b: 0.23887502, a: 1}
+  m_Sprite: {fileID: -627818050, guid: ef26934bdb3c41a49850ef932ff20d05, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -411,7 +413,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1038a517b34037c4aafdef5c1292a3f8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -422,23 +424,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &38489876133204626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6122676632931200089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43a441102c301d4cb0ec595e87db79f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Fireball: {fileID: -355889364746921394}
-  firePosition: {fileID: 6684428169422428474}
-  Molotov: {fileID: 1064304261947391618, guid: 99c33f3febc9c50479b7eee1ef095c84, type: 3}
-  cooldownTime: 2
-  nextFireTime: 0
 --- !u!114 &9104736109438555870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,8 +472,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0, y: -0.4183476}
+  m_Size: {x: 1, y: 2.1833048}
   m_Direction: 0
 --- !u!114 &4154304704433748066
 MonoBehaviour:
@@ -578,7 +563,7 @@ MonoBehaviour:
     m_ActionName: 'Player/Dash[/XInputControllerWindows/leftTrigger,/Keyboard/shift]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 38489876133204626}
+      - m_Target: {fileID: 6275719042474070778}
         m_TargetAssemblyTypeName: MolotovThrow, Assembly-CSharp
         m_MethodName: Shoot
         m_Mode: 0
@@ -660,6 +645,142 @@ MonoBehaviour:
   burnTickTimers: 
   ouchieBurnPrefab: {fileID: 6627225906251929974, guid: ef78ab088a83ed6419042f81fa0399e2, type: 3}
   ouchiePoisonPrefab: {fileID: 8276245736837294029, guid: 444da631c3f43034bb6cba61a659a495, type: 3}
+--- !u!95 &-1364476610369077761
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6122676632931200089}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 07ce3932e3dedd14f9b7a4b91dde5d7d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6275719042474070778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6122676632931200089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43a441102c301d4cb0ec595e87db79f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fireball: {fileID: -7801199883473242698}
+  firePosition: {fileID: 6684428169422428474}
+  Molotov: {fileID: 1064304261947391618, guid: 99c33f3febc9c50479b7eee1ef095c84, type: 3}
+  cooldownTime: 2
+  nextFireTime: 0
+--- !u!82 &-7801199883473242698
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6122676632931200089}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cfcfc7d162aad064686267f7ad8e5efa, type: 3}
+  m_Resource: {fileID: 8300000, guid: cfcfc7d162aad064686267f7ad8e5efa, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6828668121201696542
 GameObject:
   m_ObjectHideFlags: 0

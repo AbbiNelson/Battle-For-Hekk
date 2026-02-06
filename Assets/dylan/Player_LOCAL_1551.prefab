@@ -360,7 +360,6 @@ MonoBehaviour:
     m_ActionId: feb4ba22-723e-423c-bf43-432b3a872376
     m_ActionName: 'Player/Dash[/XInputControllerWindows/leftTrigger,/XInputControllerWindows1/leftTrigger,/XInputControllerWindows/rightTrigger,/XInputControllerWindows1/rightTrigger,/Keyboard/shift]'
   - m_PersistentCalls:
-<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 891825943313040812}
         m_TargetAssemblyTypeName: HitScan, Assembly-CSharp
@@ -408,19 +407,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 53cfa4c5-daa7-44cd-bef5-1ebcb386f330
     m_ActionName: Player/AimGamepad
-=======
-      m_Calls: []
-    m_ActionId: 432d7afb-e033-40b9-97a1-f106df3334d9
-    m_ActionName: 'Player/Shoot[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f032c2dd-c57f-4e20-bf69-3a94a34dbcd4
-    m_ActionName: 'Player/AimMouse[/Mouse/position,/Pen/position]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 53cfa4c5-daa7-44cd-bef5-1ebcb386f330
-    m_ActionName: 'Player/AimGamepad[/XInputControllerWindows/rightStick]'
->>>>>>> e5ad40637705113c47f94828d9522faaa656c341
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

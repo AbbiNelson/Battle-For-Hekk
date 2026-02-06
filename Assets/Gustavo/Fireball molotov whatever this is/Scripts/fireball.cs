@@ -25,7 +25,7 @@ public class fireball : MonoBehaviour
                 var healthComponent = collision.GetComponent<Health>();
                 if (healthComponent != null)
                 {
-                    healthComponent.TakeDamage(35);
+                    healthComponent.TakeDamage(30);
                 }
             }
             
