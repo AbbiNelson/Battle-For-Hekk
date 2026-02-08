@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public float DCount;
     public float PlayerCount;
     public bool inTileSelection;
+    public TileNum TN;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,6 +34,9 @@ public class GameManager : MonoBehaviour
             Arena.SetActive(false);
             TileSelection.SetActive(true);
             inTileSelection = true;
+            TN.ClearGeneratedTiles();
+            TN.TileGen();
+
         }
         if (PlayerSelection == DCount) {
             Arena.SetActive(true);
