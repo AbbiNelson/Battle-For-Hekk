@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject TileSelection;
     public float PlayerSelection;
     public float DCount;
-    public float PlayerCount;
+    public int PlayerCount; // changed from float to int to represent a count
     public bool inTileSelection;
     public TileNum TN;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,18 +25,25 @@ public class GameManager : MonoBehaviour
                 DCount++;
             }
         }
+
+        // initialize player count at start
+        PlayerCount = GameObject.FindGameObjectsWithTag("player").Length;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
+        // refresh the player list each frame and update PlayerCount
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        PlayerCount = players.Length;
+
         if (PlayerCount <= 1) {
             Arena.SetActive(false);
             TileSelection.SetActive(true);
             inTileSelection = true;
-            TN.ClearGeneratedTiles();
-            TN.TileGen();
-
+            if (TN != null) {
+                TN.ClearGeneratedTiles();
+                TN.TileGen();
+            }
         }
         if (PlayerSelection == DCount) {
             Arena.SetActive(true);
