@@ -462,6 +462,6 @@ MonoBehaviour:
   _gunPoint: {fileID: 3067504480814632133}
   rifle: {fileID: 707096686503908675}
   _bulletTrail: {fileID: 8727552988235697765, guid: 1ec4ea5a58d17c54baf50affa7439226, type: 3}
-  _weaponRange: 10
+  _weaponRange: 20
   _muzzleFlashAnimator: {fileID: 0}
   damage: 25
