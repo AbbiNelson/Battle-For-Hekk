@@ -464,3 +464,4 @@ MonoBehaviour:
   _bulletTrail: {fileID: 8727552988235697765, guid: 1ec4ea5a58d17c54baf50affa7439226, type: 3}
   _weaponRange: 10
   _muzzleFlashAnimator: {fileID: 0}
+  damage: 25

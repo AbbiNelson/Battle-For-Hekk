@@ -40,6 +40,7 @@ public class PlayerShotgun : MonoBehaviour
             {
                 bulletInst = Instantiate(bullet, bulletSpawnPoint[i].position, gun.transform.rotation);
                 Recoil();
+                
             }
             Shoot.Play();
             timeLeft = resetTime;

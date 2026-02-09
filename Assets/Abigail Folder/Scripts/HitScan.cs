@@ -14,13 +14,14 @@ public class HitScan : MonoBehaviour
     private Vector2 direction;
     private float angle;
 
-
+    
+    public float damage;
     public void Shoot(InputAction.CallbackContext ctx)
     {
         if (!ctx.started)
             return;
 
-        //_muzzleFlashAnimator.SetTrigger(name: "Shoot");
+        
 
         var hit = Physics2D.Raycast(
             origin: (Vector2)_gunPoint.position,
@@ -40,7 +41,10 @@ public class HitScan : MonoBehaviour
         {
             trailScript.SetTargetPosition(hit.point);
 
-
+            if (hit.collider.TryGetComponent(out Health health))
+            {
+                health.TakeDamage(damage);
+            }
         }
         else
         {
@@ -58,7 +62,7 @@ public class HitScan : MonoBehaviour
         direction = (worldPosition - (Vector2)rifle.transform.position).normalized;
         rifle.transform.right = direction;
         
-        //rifle.transform.localScale = localScale;
+        
     }
 
     public void HandleGunRotationGamepad(InputAction.CallbackContext ctx)
