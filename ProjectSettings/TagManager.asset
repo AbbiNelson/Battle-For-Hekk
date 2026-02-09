@@ -7,6 +7,7 @@ TagManager:
   - PlayerHandler
   - Grid
   - Master
+  - PlayerToken
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,6 @@ TagManager:
   - Bullet
   - Ground
   - Player
-  - 
   - 
   - 
   - 

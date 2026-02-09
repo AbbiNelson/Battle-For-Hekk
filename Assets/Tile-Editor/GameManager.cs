@@ -25,9 +25,6 @@ public class GameManager : MonoBehaviour
                 DCount++;
             }
         }
-
-        // initialize player count at start
-        PlayerCount = GameObject.FindGameObjectsWithTag("player").Length;
     }
 
     // Update is called once per frame
@@ -35,21 +32,21 @@ public class GameManager : MonoBehaviour
         // refresh the player list each frame and update PlayerCount
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         PlayerCount = players.Length;
+        GameObject[] playertokens = GameObject.FindGameObjectsWithTag("PlayerToken");
 
-        if (PlayerCount <= 1) {
+        if (PlayerCount <= 1 && Arena.activeInHierarchy) {
             Arena.SetActive(false);
             TileSelection.SetActive(true);
             inTileSelection = true;
-            if (TN != null) {
-                TN.ClearGeneratedTiles();
-                TN.TileGen();
-            }
+            TN.ClearGeneratedTiles();
+            TN.TileGen();
         }
         if (PlayerSelection == DCount) {
             Arena.SetActive(true);
             Arena.GetComponent<TilemapCollider2D>().enabled = false;
             TileSelection.SetActive(false);
             inTileSelection = false;
+            
         }
     }
 }
