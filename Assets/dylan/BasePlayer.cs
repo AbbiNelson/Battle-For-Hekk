@@ -29,8 +29,6 @@ public class Cooldown
 
 public class BasePlayer : MonoBehaviour
 {
-    float horizontalInput;
-
     public int facingDirection = 1;
 
     private Rigidbody2D rb;
@@ -94,13 +92,11 @@ public class BasePlayer : MonoBehaviour
             rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, moveInput.x * moveSpeed, airControl * Time.deltaTime); // reduced air control with smoothing
         }
 
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-
-        if (horizontalInput > .1f && facingDirection < 0)
+        if (moveInput.x > .1f && facingDirection < 0)
         {
             Flip();
         }
-        else if (horizontalInput < -.1f && facingDirection > 0)
+        else if (moveInput.x < -.1f && facingDirection > 0)
         {
             Flip();
         }
@@ -112,9 +108,21 @@ public class BasePlayer : MonoBehaviour
             Vector3 scale = transform.localScale;
             scale.x *= -1;
             transform.localScale = scale;
+
+            if (transform.childCount > 0 && transform.GetChild(0).TryGetComponent(out SpriteRenderer sr))
+            {
+                if (facingDirection < 0)
+                {
+                    sr.flipX = true;
+                    sr.flipY = true;
+                }
+                else
+                {
+                    sr.flipX = false;
+                    sr.flipY = false;
+                }
+            }
         }
-
-
     }
 
     private void LateUpdate()
@@ -137,11 +145,12 @@ public class BasePlayer : MonoBehaviour
 
     private bool IsGrounded()
     {
-        if (rb.linearVelocityY > 0)
+        if (rb.linearVelocityY > 1f) // 1f instead of 0f for better jump responsiveness
         {
+            print("meow");
             return false; // if moving upwards, not grounded
         }
-
+         
         // Implement ground check logic here
         RaycastHit2D[] bottomCollisions = Physics2D.BoxCastAll(transform.position
                                                              + 1.5f * Vector3.down, new Vector2(1f, 0.2f), 0f, Vector2.zero);
