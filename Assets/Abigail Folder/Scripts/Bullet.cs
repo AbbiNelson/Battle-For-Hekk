@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private LayerMask whatDestroysBullet;
 
     private Rigidbody2D rb;
+    public float damage;
 
     private void Start()
     {
@@ -20,6 +21,11 @@ public class Bullet : MonoBehaviour
     {
         if ((whatDestroysBullet.value & (1 << collision.gameObject.layer)) > 0)
         {
+            if (collision.TryGetComponent(out Health health))
+            {
+                health.TakeDamage(damage);
+            }
+
             Destroy(gameObject);
         }
     }
