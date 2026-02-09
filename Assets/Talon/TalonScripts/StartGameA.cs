@@ -15,7 +15,6 @@ public class StartGameA : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
         transistionAnim = GetComponent<Animator>();
     }
 
