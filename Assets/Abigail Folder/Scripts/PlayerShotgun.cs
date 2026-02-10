@@ -49,6 +49,7 @@ public class PlayerShotgun : MonoBehaviour
                     bulletInst.transform.Rotate(0, 0, 180);
 
                 Recoil();
+                
             }
             Shoot.Play();
             timeLeft = resetTime;

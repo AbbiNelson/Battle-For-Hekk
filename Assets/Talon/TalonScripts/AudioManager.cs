@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     public StartGameA startGameA;
+    public WinnerOPtions winnerOPtions;
     [Header("------ Audio Source ------")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource sfxSource;
@@ -20,10 +22,22 @@ public class AudioManager : MonoBehaviour
     }
     private void Update()
     {
-        if(startGameA.canPress == false && sfxSource.isPlaying == false && once == false)
+        if(SceneManager.GetActiveScene().buildIndex == 1)
         {
-            once = true;
-            sfxSource.Play();
+            if (startGameA.canPress == false && sfxSource.isPlaying == false && once == false)
+            {
+                once = true;
+                sfxSource.Play();
+            }
         }
+        if(SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            if (winnerOPtions.canPress == false && sfxSource.isPlaying == false && once == false)
+            {
+                once = true;
+                sfxSource.Play();
+            }
+        }
+
     }
 }
