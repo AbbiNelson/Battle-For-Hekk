@@ -26,7 +26,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6656035002635936480
 Transform:
   m_ObjectHideFlags: 0
@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9244bf045d0c54548bcfee796318da97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poison: {fileID: 0}
   firePosition: {fileID: 7707678719784003555}
   Dot: {fileID: 3940031451219778773, guid: a6be58c27e4ed604b99cd799f9e0878f, type: 3}
   cooldownTime: 2.3
