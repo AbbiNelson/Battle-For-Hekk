@@ -6,8 +6,6 @@ TagManager:
   tags:
   - PlayerHandler
   - Grid
-  - Master
-  - PlayerToken
   layers:
   - Default
   - TransparentFX
@@ -15,9 +13,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Bullet
-  - Ground
-  - Player
+  - 
+  - 
+  - 
   - 
   - 
   - 
