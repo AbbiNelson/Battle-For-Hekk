@@ -19,7 +19,7 @@ public class MolotovThrow : MonoBehaviour
         }
         
         Fireball.Play();
-        BasePlayer basePlayer = GetComponent<BasePlayer>();
+        var basePlayer = GetComponentInChildren<PlayerRotation>();
 
         Instantiate(Molotov, firePosition.position, basePlayer.facingDirection == 1 ? firePosition.rotation : firePosition.rotation * Quaternion.Euler(0f, 180f, 0f));
         nextFireTime = Time.time + cooldownTime;

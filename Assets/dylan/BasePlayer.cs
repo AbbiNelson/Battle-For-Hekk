@@ -29,8 +29,6 @@ public class Cooldown
 
 public class BasePlayer : MonoBehaviour
 {
-    public int facingDirection = 1;
-
     private Rigidbody2D rb;
     private Collider2D coll;
     private Animator anim;
@@ -92,26 +90,17 @@ public class BasePlayer : MonoBehaviour
             rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, moveInput.x * moveSpeed, airControl * Time.deltaTime); // reduced air control with smoothing
         }
 
-        if (moveInput.x > .1f && facingDirection < 0)
-        {
-            Flip();
-        }
-        else if (moveInput.x < -.1f && facingDirection > 0)
-        {
-            Flip();
-        }
 
-        void Flip()
+    }
+       public void Flip(bool direction)
         {
-            facingDirection *= -1;
-
             Vector3 scale = transform.localScale;
-            scale.x *= -1;
+            scale.x = direction == false ? -1 : 1;
             transform.localScale = scale;
 
             if (transform.childCount > 0 && transform.GetChild(0).TryGetComponent(out SpriteRenderer sr))
             {
-                if (facingDirection < 0)
+                if (scale.x < 0)
                 {
                     sr.flipX = true;
                     sr.flipY = true;
@@ -123,19 +112,9 @@ public class BasePlayer : MonoBehaviour
                 }
             }
         }
-    }
 
     private void LateUpdate()
     {
-        if (rb.linearVelocityX > 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1); // facing right
-        }
-        else if (rb.linearVelocityX < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1); // facing left
-        }
-
         anim.SetBool("isGrounded", IsGrounded());
         anim.SetBool("isDashing", rb.gravityScale == 0);
 
@@ -171,7 +150,24 @@ public class BasePlayer : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
+        Vector2 input = context.ReadValue<Vector2>();
+        // If PlayerRotation exists and does not override direction, flip
+        var playerRotation = GetComponentInChildren<PlayerRotation>();
+        if (input != Vector2.zero && playerRotation != null && !playerRotation.overrideDirection)
+        {
+            Flip(input.x > 0);
+        }
+        else
+        {
+            // If HitScan exists and does not override direction, flip
+            var hitScan = GetComponent<HitScan>();
+            if (input != Vector2.zero && hitScan != null && !hitScan.overrideDirection)
+            {
+                Flip(input.x > 0);
+            }
+        }
+
+        moveInput = input;
     }
 
     public void OnJump(InputAction.CallbackContext context)
