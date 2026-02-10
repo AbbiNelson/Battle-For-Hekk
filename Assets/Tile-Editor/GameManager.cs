@@ -1,3 +1,4 @@
+using Unity.Android.Gradle;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int PlayerCount; // changed from float to int to represent a count
     public bool inTileSelection;
     public TileNum TN;
+    public bool combat;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,7 +34,7 @@ public class GameManager : MonoBehaviour
         // refresh the player list each frame and update PlayerCount
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         PlayerCount = players.Length;
-        GameObject[] playertokens = GameObject.FindGameObjectsWithTag("PlayerToken");
+        var playertokens = FindObjectsByType<NewTile>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 
         if (PlayerCount <= 1 && Arena.activeInHierarchy) {
             Arena.SetActive(false);
@@ -40,6 +42,11 @@ public class GameManager : MonoBehaviour
             inTileSelection = true;
             TN.ClearGeneratedTiles();
             TN.TileGen();
+            for (int i = 0; i < DCount; i++)
+            {
+                Debug.Log("Activating player token: " + playertokens[i].name);
+                playertokens[i].gameObject.SetActive(true);
+            }
         }
         if (PlayerSelection == DCount) {
             Arena.SetActive(true);
@@ -47,6 +54,12 @@ public class GameManager : MonoBehaviour
             TileSelection.SetActive(false);
             inTileSelection = false;
             
+        }
+        if (Arena.activeInHierarchy && combat) {
+            for (int i = 0; i < playertokens.Length; i++)
+            {
+                playertokens[i].gameObject.SetActive(false);
+            }
         }
     }
 }

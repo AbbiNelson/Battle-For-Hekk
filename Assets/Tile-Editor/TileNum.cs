@@ -23,9 +23,10 @@ public class TileNum : MonoBehaviour
     public void TileGen()
     {
         // Allocate an array sized to the requested number of tiles
-        tileList = new GameObject[Random.Range(InputSystem.devices.Count, tileNum)];
+        int tileAmount = Random.Range(InputSystem.devices.Count, tileNum + 1);
+        tileList = new GameObject[tileAmount];
 
-        for (int i = 0; i < tileNum; i++)
+        for (int i = 0; i < tileAmount; i++)
         {
             // Randomize X between -25 and 25, Y between -13 and 13
             float randomX = Random.Range(MinX, MaxX);
