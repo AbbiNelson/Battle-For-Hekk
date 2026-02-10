@@ -113,7 +113,7 @@ Transform:
   m_GameObject: {fileID: 2018465483121941870}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.443, y: 0.12, z: 0}
+  m_LocalPosition: {x: 0.244, y: 0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 1372215100646856398}
   - component: {fileID: 891825943313040812}
   m_Layer: 7
-  m_Name: Player
+  m_Name: Player_LOCAL_1551
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -360,7 +360,6 @@ MonoBehaviour:
     m_ActionId: feb4ba22-723e-423c-bf43-432b3a872376
     m_ActionName: 'Player/Dash[/XInputControllerWindows/leftTrigger,/XInputControllerWindows1/leftTrigger,/XInputControllerWindows/rightTrigger,/XInputControllerWindows1/rightTrigger,/Keyboard/shift]'
   - m_PersistentCalls:
-<<<<<<< HEAD
       m_Calls:
       - m_Target: {fileID: 891825943313040812}
         m_TargetAssemblyTypeName: HitScan, Assembly-CSharp
@@ -408,19 +407,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 53cfa4c5-daa7-44cd-bef5-1ebcb386f330
     m_ActionName: Player/AimGamepad
-=======
-      m_Calls: []
-    m_ActionId: 432d7afb-e033-40b9-97a1-f106df3334d9
-    m_ActionName: 'Player/Shoot[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f032c2dd-c57f-4e20-bf69-3a94a34dbcd4
-    m_ActionName: 'Player/AimMouse[/Mouse/position,/Pen/position]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 53cfa4c5-daa7-44cd-bef5-1ebcb386f330
-    m_ActionName: 'Player/AimGamepad[/XInputControllerWindows/rightStick]'
->>>>>>> e5ad40637705113c47f94828d9522faaa656c341
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -476,5 +462,6 @@ MonoBehaviour:
   _gunPoint: {fileID: 3067504480814632133}
   rifle: {fileID: 707096686503908675}
   _bulletTrail: {fileID: 8727552988235697765, guid: 1ec4ea5a58d17c54baf50affa7439226, type: 3}
-  _weaponRange: 10
+  _weaponRange: 20
   _muzzleFlashAnimator: {fileID: 0}
+  damage: 25
