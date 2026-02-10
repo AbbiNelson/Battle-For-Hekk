@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 5553867022318329763}
   - component: {fileID: 1372215100646856398}
   - component: {fileID: 891825943313040812}
+  - component: {fileID: 335576080261714665}
   m_Layer: 7
   m_Name: Player_LOCAL_1551
   m_TagString: Untagged
@@ -465,3 +466,22 @@ MonoBehaviour:
   _weaponRange: 20
   _muzzleFlashAnimator: {fileID: 0}
   damage: 25
+--- !u!114 &335576080261714665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5262018748184389022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2649405230c607468a8d3f4a0a7e20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneOffEffects:
+  - {fileID: 3322680907671155776, guid: 0e53055effc9e2448aca0b081b8e470e, type: 3}
+  - {fileID: 26927520815779185, guid: 627ce2a5848462145b03a69510eb0c7c, type: 3}
+  continuousEffects:
+  - {fileID: 4533112191270465898, guid: 94175d8a97d45fa439549e8a523ddb48, type: 3}
+  continuousEffectOffsets:
+  - {x: 0, y: -1.5}
