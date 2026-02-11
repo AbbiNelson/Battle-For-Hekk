@@ -11,6 +11,15 @@ public class PlayerHandler : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    public void SpawnTokens() {
         for (int i = 0; i < InputSystem.devices.Count; ++i)
         {
             var device = InputSystem.devices[i];
@@ -20,13 +29,7 @@ public class PlayerHandler : MonoBehaviour
                 var input = managerinput.JoinPlayer(pairWithDevice: device);
             }
         }
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        playerCount = 0;
     }
     public void SelectSprite() {
         Debug.Log("Selecting Sprite for Player " + playerCount);

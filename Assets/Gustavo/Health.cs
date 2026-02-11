@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
         if (health <= 0)
         {
             transform.parent.gameObject.SetActive(false);
+            health = maxHealth;
         }
 
 
@@ -29,6 +30,7 @@ public class Health : MonoBehaviour
         if (health <= 0)
         {
             transform.parent.gameObject.SetActive(false);
+            health = maxHealth;
         }
     }
 }

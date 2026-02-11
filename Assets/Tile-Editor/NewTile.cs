@@ -22,7 +22,7 @@ public class NewTile : MonoBehaviour
     {
         if (ctx.started)
         {
-            if (GM.inTileSelection)
+            if (GM.inTileSelection && !selected)
             {
                 tile.transform.SetParent(transform, false);
                 tile.transform.localPosition = Vector3.zero;
@@ -34,13 +34,15 @@ public class NewTile : MonoBehaviour
                 GM.PlayerSelection += 1;
                 selected = true;
             }
-            else
+            else if (GM.Arena.activeInHierarchy)
             {
                 go = GameObject.FindWithTag("Grid");
                 tile.transform.SetParent(go.transform, true);
                 GM.PlayerSelection -= 1;
+                tile.GetComponent<Collider2D>().isTrigger = false;
                 tile = null;
                 selected = false;
+                Destroy(gameObject);
 
             }
         }
