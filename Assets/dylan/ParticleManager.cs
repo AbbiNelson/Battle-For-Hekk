@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ParticleManager : MonoBehaviour
 {
@@ -17,21 +19,31 @@ public class ParticleManager : MonoBehaviour
         {
             continuousObjects[i] = Instantiate(continuousEffects[i].gameObject, transform);
             continuousObjects[i].transform.localPosition = continuousEffectOffsets[i];
-            PlayParticleEffect(i);
-            //continuousObjects[i].GetComponent<ParticleSystem>().Play(); // Start with continuous effects stopped
-
-            //if (continuousEffects[i] != null)
-            //{
-            //    continuousEffects[i].Play();
-            //}
+            StopParticleEffect(i);
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnMoveStart()
     {
-        //PlayOneOffEffect(0, 1.5f * Vector2.down); // Example: Play the first one-off effect
+        PlayParticleEffect(0); // start running particle effect
     }
+
+    public void OnMoveEnd()
+    {
+        StopParticleEffect(0); // stop running particle effect
+    }
+
+    public void OnJump()
+    {
+        PlayOneOffEffect(0, 1.5f * Vector2.down);
+    }
+
+    public void OnLand()
+    {
+        PlayOneOffEffect(1, 1.5f * Vector2.down);
+    }
+
+    // ------------ Helper Methods ------------
 
     void PlayParticleEffect(int index)
     {
