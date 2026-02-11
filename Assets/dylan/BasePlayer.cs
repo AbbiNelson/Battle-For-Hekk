@@ -37,11 +37,11 @@ public class BasePlayer : MonoBehaviour
     private Vector2 moveInput;
     private bool doubleJumpAvailable = true;
 
-    private float moveSpeed = 5f;
-    private float jumpForce = 10f;
+    private float moveSpeed = 8f;
+    private float jumpForce = 12f;
     private float dashForce = 15f;
-    private float dashDuration = 0.2f; // in seconds
-    private Cooldown dashCooldown = new Cooldown(5f); // 2 seconds cooldown
+    private float dashDuration = 0.3f; // in seconds
+    private Cooldown dashCooldown = new Cooldown(2f); // 2 seconds cooldown
     private float airControl = 3f;
 
     // methods to assign values to the player attributes

@@ -23,7 +23,7 @@ public class PlayerHandler : MonoBehaviour
         {
             var device = InputSystem.devices[i];
 
-            if (device.displayName == "Xbox Controller")
+            if (device is Gamepad)
             {
                 var input = managerinput.JoinPlayer(pairWithDevice: device);
             }

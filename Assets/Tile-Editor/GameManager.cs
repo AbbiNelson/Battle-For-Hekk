@@ -13,13 +13,13 @@ public class GameManager : MonoBehaviour
     public TileNum TN;
     public bool combat;
     public PlayerHandler PH;
-    public PlayerJoiner PJ;
+    public PlayerPreloader PD;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Arena.SetActive(true);
         TileSelection.SetActive(false);
-        //PJ.SpawnPlayers();
+        PD.SpawnPlayers();
     }
 
     // Update is called once per frame
