@@ -17,11 +17,11 @@ GameObject:
   - component: {fileID: 1317224253928599339}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: PlayerToken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9084172568760683267
 Transform:
   m_ObjectHideFlags: 0
@@ -107,6 +107,7 @@ MonoBehaviour:
   rb2d: {fileID: 675949010845639087}
   speed: 15
   pH: {fileID: 0}
+  GM: {fileID: 0}
 --- !u!50 &675949010845639087
 Rigidbody2D:
   serializedVersion: 5
@@ -289,3 +290,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
+  GM: {fileID: 0}
+  selected: 0
+  go: {fileID: 0}
