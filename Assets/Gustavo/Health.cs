@@ -5,7 +5,8 @@ public class Health : MonoBehaviour
 {
     public float health;
     public float maxHealth;
-   
+    private GameObject activeOuchieBurnInstance;
+    private GameObject activeOuchiePoisonInstance;
     void Start()
     {
         health = maxHealth;
@@ -31,6 +32,8 @@ public class Health : MonoBehaviour
         {
             transform.parent.gameObject.SetActive(false);
             health = maxHealth;
+        
+            Destroy(activeOuchieBurnInstance);
         }
     }
 }
