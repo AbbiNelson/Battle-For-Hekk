@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3838154293524644906}
   - component: {fileID: 7731444915758908975}
+  - component: {fileID: 8825272924716425460}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -53,6 +54,18 @@ MonoBehaviour:
   - {fileID: 8271257499957100555}
   - {fileID: 2673226231851756801}
   - {fileID: 7307286430094758830}
+--- !u!114 &8825272924716425460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5744275437745415234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47252f52c9f541642bec8775b50fe722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &83559089579198983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -341,6 +354,10 @@ PrefabInstance:
     - target: {fileID: 529673137050226481, guid: 678cf08c07dbadc478d79b594f5d54d2, type: 3}
       propertyPath: m_Name
       value: PoisonGuy
+      objectReference: {fileID: 0}
+    - target: {fileID: 529673137050226481, guid: 678cf08c07dbadc478d79b594f5d54d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 529673137050226481, guid: 678cf08c07dbadc478d79b594f5d54d2, type: 3}
       propertyPath: m_TagString
