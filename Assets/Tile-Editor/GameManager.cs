@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update(){
         // refresh the player list each frame and update PlayerTokenCount
-        GameObject[] activeplayers = GameObject.FindGameObjectsWithTag("Player");
+        var activeplayers = GameObject.FindObjectsByType<GeneralSwitch>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
         PlayerTokenCount = activeplayers.Length;
         
         var player = FindObjectsByType<GeneralSwitch>(FindObjectsInactive.Include, FindObjectsSortMode.None);

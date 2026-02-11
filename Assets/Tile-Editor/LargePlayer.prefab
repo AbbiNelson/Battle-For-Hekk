@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4520989400910762043}
+  - component: {fileID: 3490352501687406087}
   m_Layer: 0
   m_Name: LargePlayer
   m_TagString: Untagged
@@ -33,6 +34,168 @@ Transform:
   - {fileID: 7674626322589010253}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3490352501687406087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7941121759220339422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 5419d40d902859d4da9d0b677156b913, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1736670391164451907}
+        m_TargetAssemblyTypeName: BaseBasePlayer, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 15d3b477-55de-4429-8ff7-2e91c4478dbb
+    m_ActionName: 'Player/Move[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1736670391164451907}
+        m_TargetAssemblyTypeName: BaseBasePlayer, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8f35287f-d64f-4366-ae8e-fe3a39645f5e
+    m_ActionName: 'Player/Jump[/XInputControllerWindows/buttonSouth,/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1736670391164451907}
+        m_TargetAssemblyTypeName: BaseBasePlayer, Assembly-CSharp
+        m_MethodName: Dash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: feb4ba22-723e-423c-bf43-432b3a872376
+    m_ActionName: 'Player/Dash[/XInputControllerWindows/leftTrigger,/Keyboard/shift]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1736670391164451907}
+        m_TargetAssemblyTypeName: BaseBasePlayer, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 432d7afb-e033-40b9-97a1-f106df3334d9
+    m_ActionName: 'Player/Shoot[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1736670391164451907}
+        m_TargetAssemblyTypeName: BaseBasePlayer, Assembly-CSharp
+        m_MethodName: AimMouse
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f032c2dd-c57f-4e20-bf69-3a94a34dbcd4
+    m_ActionName: 'Player/AimMouse[/Mouse/position,/Pen/position]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1736670391164451907}
+        m_TargetAssemblyTypeName: BaseBasePlayer, Assembly-CSharp
+        m_MethodName: AimGamepad
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 53cfa4c5-daa7-44cd-bef5-1ebcb386f330
+    m_ActionName: 'Player/AimGamepad[/XInputControllerWindows/rightStick]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 704276050944069770}
+        m_TargetAssemblyTypeName: PlayerSelection, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 926c6ece-83de-4e8a-adff-1b572dae290a
+    m_ActionName: 'Token/Move[/XInputControllerWindows/leftStick,/XInputControllerWindows1/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b5db0bb6-778f-44b8-ad2f-07b11723852b
+    m_ActionName: 'Token/Look[/XInputControllerWindows/rightStick,/XInputControllerWindows1/rightStick,/Mouse/delta,/Pen/delta]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 492987283945991525}
+        m_TargetAssemblyTypeName: NewTile, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7fe0108e-9aae-4bc6-acc6-056d3cab69b3
+    m_ActionName: 'Token/Interact[/Keyboard/e,/XInputControllerWindows/buttonSouth,/XInputControllerWindows1/buttonSouth]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1001 &1440760815571323778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85,16 +248,44 @@ PrefabInstance:
       propertyPath: m_Name
       value: CombatPlayer
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5744275437745415234, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2015181091519530635, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+    - {fileID: 6639279296297968723, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+    - {fileID: 1419178033576653634, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+    - {fileID: 1264576555219372442, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5744275437745415234, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1736670391164451907}
   m_SourcePrefab: {fileID: 100100000, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
 --- !u!4 &2791458445356896168 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3838154293524644906, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
   m_PrefabInstance: {fileID: 1440760815571323778}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6649943388713873344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5744275437745415234, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+  m_PrefabInstance: {fileID: 1440760815571323778}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1736670391164451907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6649943388713873344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61454c3716f737549bbfde8fa00c0cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1481905452157747790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -147,11 +338,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4650507398293949489, guid: 7a0153643d9b7a741a107a683c5dc894, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a0153643d9b7a741a107a683c5dc894, type: 3}
+--- !u!114 &492987283945991525 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1317224253928599339, guid: 7a0153643d9b7a741a107a683c5dc894, type: 3}
+  m_PrefabInstance: {fileID: 1481905452157747790}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4da1c2be8ac494889b875644ab9c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &704276050944069770 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2114121707890791108, guid: 7a0153643d9b7a741a107a683c5dc894, type: 3}
+  m_PrefabInstance: {fileID: 1481905452157747790}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f54742621839f54d8fb3f05028dfe96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7674626322589010253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9084172568760683267, guid: 7a0153643d9b7a741a107a683c5dc894, type: 3}
