@@ -23,8 +23,22 @@ public class StatusEffectManager : MonoBehaviour
         healthScript = GetComponent<Health>();
     }
 
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+        burnCoroutine = null;
+        poisonCoroutine = null;
+
+        poisonTickTimers.Clear();
+        burnTickTimers.Clear();
+
+        Destroy(activeOuchiePoisonInstance);
+        Destroy(activeOuchieBurnInstance);
+    }
+
     public void ApplyPoison(int ticks)
     {
+        Debug.Log("Poison");
         if (poisonTickTimers == null) poisonTickTimers = new List<int>();
         poisonTickTimers.Add(ticks);
 
@@ -40,6 +54,7 @@ public class StatusEffectManager : MonoBehaviour
 
     public void ApplyBurn(int ticks)
     {
+        Debug.Log("Burn");
         if (burnTickTimers == null) burnTickTimers = new List<int>();
         burnTickTimers.Add(ticks);
 
@@ -74,7 +89,7 @@ public class StatusEffectManager : MonoBehaviour
             Destroy(activeOuchiePoisonInstance);
             activeOuchieBurnInstance = null;
         }
-
+        
 
 
         poisonCoroutine = null;
@@ -101,6 +116,8 @@ public class StatusEffectManager : MonoBehaviour
             Destroy(activeOuchieBurnInstance);
             activeOuchieBurnInstance = null;
         }
+        
+
 
         burnCoroutine = null;
     }
