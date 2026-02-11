@@ -16,7 +16,7 @@ public class Health : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            transform.parent.gameObject.SetActive(false);
         }
 
 
@@ -28,7 +28,7 @@ public class Health : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            transform.parent.gameObject.SetActive(false);
         }
     }
 }

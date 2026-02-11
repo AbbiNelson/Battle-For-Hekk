@@ -1,4 +1,3 @@
-using Unity.Android.Gradle;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
@@ -32,8 +31,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update(){
         // refresh the player list each frame and update PlayerCount
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        PlayerCount = players.Length;
+        GameObject[] activeplayers = GameObject.FindGameObjectsWithTag("Player");
+        PlayerCount = activeplayers.Length;
+        var player = FindObjectsByType<GeneralSwitch>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         var playertokens = FindObjectsByType<NewTile>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 
         if (PlayerCount <= 1 && Arena.activeInHierarchy) {
@@ -53,8 +53,8 @@ public class GameManager : MonoBehaviour
             Arena.GetComponent<TilemapCollider2D>().enabled = false;
             TileSelection.SetActive(false);
             inTileSelection = false;
-            
         }
+
         if (Arena.activeInHierarchy && combat) {
             for (int i = 0; i < playertokens.Length; i++)
             {
