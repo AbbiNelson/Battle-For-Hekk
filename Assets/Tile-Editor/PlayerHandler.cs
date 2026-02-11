@@ -27,6 +27,8 @@ public class PlayerHandler : MonoBehaviour
 
             if (device is Gamepad)
             {
+                Debug.Log("Joining Player " + playerCount + " with device: " + device.displayName);
+
                 var input = managerinput.JoinPlayer(pairWithDevice: device);
             }
         }

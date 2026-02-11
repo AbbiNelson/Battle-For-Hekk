@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public TileNum TN;
     public bool combat;
     public PlayerHandler PH;
-    public PlayerPreloader PD;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

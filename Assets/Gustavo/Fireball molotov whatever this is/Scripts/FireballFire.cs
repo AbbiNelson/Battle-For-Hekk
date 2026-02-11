@@ -13,6 +13,7 @@ public class MolotovThrow : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext ctx)
     {
+        
         if (!ctx.performed || Time.time < nextFireTime)
         {
             return;
