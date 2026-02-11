@@ -18,7 +18,8 @@ public class PlayerHandler : MonoBehaviour
     {
         
     }
-    public void SpawnTokens() {
+    public void SpawnPlayers()
+    {
         for (int i = 0; i < InputSystem.devices.Count; ++i)
         {
             var device = InputSystem.devices[i];
@@ -28,7 +29,6 @@ public class PlayerHandler : MonoBehaviour
                 var input = managerinput.JoinPlayer(pairWithDevice: device);
             }
         }
-        playerCount = 0;
     }
     public void SelectSprite() {
         Debug.Log("Selecting Sprite for Player " + playerCount);

@@ -5,6 +5,6 @@ public class TargetGroup : MonoBehaviour
 {
     private void Awake()
     {
-        FindFirstObjectByType<CinemachineTargetGroup>().AddMember(transform, 1, 0);
+        //FindFirstObjectByType<CinemachineTargetGroup>().AddMember(transform, 1, 0);
     }
 }

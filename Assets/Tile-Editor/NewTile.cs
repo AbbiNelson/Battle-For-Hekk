@@ -42,7 +42,7 @@ public class NewTile : MonoBehaviour
                 tile.GetComponent<Collider2D>().isTrigger = false;
                 tile = null;
                 selected = false;
-                Destroy(gameObject);
+                gameObject.SetActive(false);
 
             }
         }

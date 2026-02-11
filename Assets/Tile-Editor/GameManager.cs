@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     {
         Arena.SetActive(true);
         TileSelection.SetActive(false);
-        PD.SpawnPlayers();
+        PH.SpawnPlayers();
     }
 
     // Update is called once per frame
@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
         var playertokens = FindObjectsByType<NewTile>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         if (PlayerTokenCount == 1)
         {
-            PH.SpawnTokens();
             Arena.SetActive(false);
             TileSelection.SetActive(true);
             inTileSelection = true;
