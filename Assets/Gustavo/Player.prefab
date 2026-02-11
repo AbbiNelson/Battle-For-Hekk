@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7731444915758908975}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,6 +164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireballGuy
       objectReference: {fileID: 0}
+    - target: {fileID: 6122676632931200089, guid: 16653a7dbec1641429ba0d66a6fe5177, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7421223411275917582, guid: 16653a7dbec1641429ba0d66a6fe5177, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -234,6 +238,10 @@ PrefabInstance:
     - target: {fileID: 639429833119160577, guid: 4e80174c82477d04e8fab5d8e96b7573, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 639429833119160577, guid: 4e80174c82477d04e8fab5d8e96b7573, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2492230099517591383, guid: 4e80174c82477d04e8fab5d8e96b7573, type: 3}
       propertyPath: m_LocalPosition.x
@@ -333,6 +341,10 @@ PrefabInstance:
     - target: {fileID: 529673137050226481, guid: 678cf08c07dbadc478d79b594f5d54d2, type: 3}
       propertyPath: m_Name
       value: PoisonGuy
+      objectReference: {fileID: 0}
+    - target: {fileID: 529673137050226481, guid: 678cf08c07dbadc478d79b594f5d54d2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6656035002635936480, guid: 678cf08c07dbadc478d79b594f5d54d2, type: 3}
       propertyPath: m_LocalPosition.x
