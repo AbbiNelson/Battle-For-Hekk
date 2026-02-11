@@ -66,6 +66,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47252f52c9f541642bec8775b50fe722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerTokenCount: 0
+  poisonCheck: {fileID: 6641903420983521186}
+  fireCheck: {fileID: 8271257499957100555}
+  shotgunCheck: {fileID: 2673226231851756801}
+  hitscanCheck: {fileID: 7307286430094758830}
 --- !u!1001 &83559089579198983
 PrefabInstance:
   m_ObjectHideFlags: 0
