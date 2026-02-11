@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1282401168912692840}
   - component: {fileID: 8741321659315270372}
   - component: {fileID: 2548884698816258644}
-  - component: {fileID: 7735977803523008532}
   m_Layer: 0
   m_Name: PlayerHandler
   m_TagString: PlayerHandler
@@ -102,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c58a63fe28858849b5495b7ca8d51bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCount: -1
+  playerCount: 0
   selectedSprite: {fileID: 0}
   spriteOptions:
   - {fileID: -5020553949135621212, guid: cd0e2549abc47224dbd0be75150253cc, type: 3}
@@ -111,16 +110,4 @@ MonoBehaviour:
   - {fileID: -7074196758342140682, guid: 9c93f9db2d7bae447a66750e52fffbeb, type: 3}
   - {fileID: 1191741475063726234, guid: a7a48c54b7e016a40831a7965ed8f0e7, type: 3}
   - {fileID: -4850749223571182757, guid: 04f9a168b4b918d4a8ae17366d291971, type: 3}
---- !u!114 &7735977803523008532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2718205771415261755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f8683691d6a8ce4bb445b56163adad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   managerinput: {fileID: 8741321659315270372}

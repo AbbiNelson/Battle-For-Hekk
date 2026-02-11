@@ -16,15 +16,17 @@ public class TileNum : MonoBehaviour
 
     private void Awake()
     {
+        ClearGeneratedTiles();
         TileGen();
     }
 
     public void TileGen()
     {
         // Allocate an array sized to the requested number of tiles
-        tileList = new GameObject[Random.Range(InputSystem.devices.Count, tileNum)];
+        int tileAmount = Random.Range(InputSystem.devices.Count, tileNum + 1);
+        tileList = new GameObject[tileAmount];
 
-        for (int i = 0; i < tileNum; i++)
+        for (int i = 0; i < tileAmount; i++)
         {
             // Randomize X between -25 and 25, Y between -13 and 13
             float randomX = Random.Range(MinX, MaxX);
@@ -45,14 +47,17 @@ public class TileNum : MonoBehaviour
     // Call this to destroy all generated tiles and clear the array
     public void ClearGeneratedTiles()
     {
-        for (int i = 0; i < tileList.Length; i++)
+        //destroy any remaining children of this transform
+        for (int i = transform.childCount - 1; i >= 0; i--)
         {
-            if (tileList[i] != null)
-                Destroy(tileList[i]);
-
-            tileList[i] = null;
+            var child = transform.GetChild(i).gameObject;
+            if (child != null)
+                Destroy(child);
         }
 
+        // Reset the array
         tileList = new GameObject[0];
+
+        Debug.Log("ClearGeneratedTiles: destroyed generated tiles and cleared tileList.");
     }
 }
