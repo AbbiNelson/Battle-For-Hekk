@@ -15,8 +15,10 @@ public class ParticleManager : MonoBehaviour
 
         for (int i = 0; i < continuousEffects.Length; i++)
         {
-            continuousObjects[i] = Instantiate(continuousEffects[i].gameObject, transform.position - (Vector3)continuousEffectOffsets[i]);
-            continuousObjects[i].GetComponent<ParticleSystem>().Play(); // Start with continuous effects stopped
+            continuousObjects[i] = Instantiate(continuousEffects[i].gameObject, transform);
+            continuousObjects[i].transform.localPosition = continuousEffectOffsets[i];
+            PlayParticleEffect(i);
+            //continuousObjects[i].GetComponent<ParticleSystem>().Play(); // Start with continuous effects stopped
 
             //if (continuousEffects[i] != null)
             //{
@@ -28,7 +30,7 @@ public class ParticleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayOneOffEffect(0, 1.5f * Vector2.down); // Example: Play the first one-off effect
+        //PlayOneOffEffect(0, 1.5f * Vector2.down); // Example: Play the first one-off effect
     }
 
     void PlayParticleEffect(int index)
