@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 2932361831214710031}
   - component: {fileID: 6618323569464052420}
   - component: {fileID: 5887963818022187404}
+  - component: {fileID: 1630430345750216640}
   m_Layer: 0
   m_Name: ShotgunGuy
   m_TagString: Player
@@ -471,6 +472,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1630430345750216640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639429833119160577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2649405230c607468a8d3f4a0a7e20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneOffEffects:
+  - {fileID: 4193471680280732854, guid: 0e53055effc9e2448aca0b081b8e470e, type: 3}
+  - {fileID: 8914446931113690485, guid: 627ce2a5848462145b03a69510eb0c7c, type: 3}
+  continuousEffects:
+  - {fileID: 2906991857973506590, guid: 5048637c01cdc114dbc67f85b08c1575, type: 3}
+  continuousEffectOffsets:
+  - {x: 0, y: -1.5}
 --- !u!1 &3530828673501410509
 GameObject:
   m_ObjectHideFlags: 0

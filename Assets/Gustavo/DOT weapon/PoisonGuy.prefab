@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 613031795191369352}
   - component: {fileID: -3579372338633187289}
   - component: {fileID: 3460301294749205949}
+  - component: {fileID: 8655366465623451854}
   m_Layer: 0
   m_Name: PoisonGuy
   m_TagString: Player
@@ -200,6 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9244bf045d0c54548bcfee796318da97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poison: {fileID: 0}
   firePosition: {fileID: 7707678719784003555}
   Dot: {fileID: 3940031451219778773, guid: a6be58c27e4ed604b99cd799f9e0878f, type: 3}
   cooldownTime: 2.3
@@ -395,6 +397,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66857a6f793592344ab083af920fd8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8655366465623451854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529673137050226481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2649405230c607468a8d3f4a0a7e20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneOffEffects:
+  - {fileID: 4193471680280732854, guid: 0e53055effc9e2448aca0b081b8e470e, type: 3}
+  - {fileID: 8914446931113690485, guid: 627ce2a5848462145b03a69510eb0c7c, type: 3}
+  continuousEffects:
+  - {fileID: 2906991857973506590, guid: 5048637c01cdc114dbc67f85b08c1575, type: 3}
+  continuousEffectOffsets:
+  - {x: 0, y: -1.5}
 --- !u!1 &3784520532048608609
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,6 +32,7 @@ public class BasePlayer : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D coll;
     private Animator anim;
+    private ParticleManager particleManager;
 
     private Vector2 moveInput;
     private bool doubleJumpAvailable = true;
@@ -71,6 +72,7 @@ public class BasePlayer : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
+        particleManager = GetComponent<ParticleManager>();
     }
 
     void Update()
@@ -168,6 +170,15 @@ public class BasePlayer : MonoBehaviour
         }
 
         moveInput = input;
+
+        if (context.performed && IsGrounded())
+        {
+            particleManager.OnMoveStart();
+        }
+        else if (context.canceled)
+        {
+            particleManager.OnMoveEnd();
+        }
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -184,6 +195,12 @@ public class BasePlayer : MonoBehaviour
 
             // trigger jump animation
             anim.SetTrigger("Jump");
+
+            // trigger jump particles
+            particleManager.OnJump();
+
+            // stop running particles
+            particleManager.OnMoveEnd();
         }
     }
 
@@ -205,11 +222,17 @@ public class BasePlayer : MonoBehaviour
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0; // disable gravity during dash
 
+        particleManager.OnMoveStart();
+
         // determine dash direction (if not pressing anything, base it off previously pressed horizontal direction)
-        Vector2 dashDirection = new Vector2(transform.localScale.x, 0).normalized;
+        float dir = moveInput.x != 0 ? moveInput.x : transform.localScale.x;
+
+        Vector2 dashDirection = new Vector2(dir, 0).normalized;
         rb.linearVelocity = dashDirection * dashForce;
 
         yield return new WaitForSeconds(dashDuration); // pause for dash duration
         rb.gravityScale = originalGravity; // restore original gravity
+
+        particleManager.OnMoveEnd();
     }
 }

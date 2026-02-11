@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 616928033414850184}
   - component: {fileID: 1385031837726858959}
   - component: {fileID: 3787390665024699329}
+  - component: {fileID: 2358068185679309879}
   m_Layer: 0
   m_Name: RiflePlayer
   m_TagString: Untagged
@@ -564,6 +565,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2358068185679309879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7223895601095317929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2649405230c607468a8d3f4a0a7e20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneOffEffects:
+  - {fileID: 4193471680280732854, guid: 0e53055effc9e2448aca0b081b8e470e, type: 3}
+  - {fileID: 8914446931113690485, guid: 627ce2a5848462145b03a69510eb0c7c, type: 3}
+  continuousEffects:
+  - {fileID: 2906991857973506590, guid: 5048637c01cdc114dbc67f85b08c1575, type: 3}
+  continuousEffectOffsets:
+  - {x: 0, y: -1.5}
 --- !u!1 &7768756328379149127
 GameObject:
   m_ObjectHideFlags: 0
