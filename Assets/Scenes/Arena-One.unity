@@ -177,6 +177,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2673226231851756801, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3838154293524644906, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.48
@@ -220,6 +224,14 @@ PrefabInstance:
     - target: {fileID: 5744275437745415234, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_Name
       value: Player (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6641903420983521186, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271257499957100555, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34695,6 +34707,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2673226231851756801, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3838154293524644906, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5808353
