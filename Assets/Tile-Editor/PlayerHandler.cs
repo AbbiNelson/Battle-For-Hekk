@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerHandler : MonoBehaviour
 {
     public int playerCount =  0;
+    public int playerIndex = 0;
     public Sprite selectedSprite;
     public Sprite[] spriteOptions;
     [SerializeField] private Material[] playerColors;

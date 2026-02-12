@@ -217,6 +217,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4520989400910762043}
     m_Modifications:
+    - target: {fileID: 1524049299824328884, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 07ce3932e3dedd14f9b7a4b91dde5d7d, type: 2}
+    - target: {fileID: 2673226231851756801, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3838154293524644906, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5808353
@@ -257,6 +265,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4132948867504210417, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3685657370021133027, guid: dc12514428359c949a83aa4d0070cb28, type: 3}
+    - target: {fileID: 5367332544756856726, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 528216346, guid: ef26934bdb3c41a49850ef932ff20d05, type: 3}
+    - target: {fileID: 5413629024655593901, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1220698ae6a3b8b4eb482aaacb993153, type: 2}
     - target: {fileID: 5744275437745415234, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_Name
       value: CombatPlayer
@@ -269,6 +289,22 @@ PrefabInstance:
       propertyPath: health
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6641903420983521186, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307286430094758830, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7823961090606659521, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4824192831537312121, guid: b05f980bf368c344389af53f93646d04, type: 3}
+    - target: {fileID: 8966874623439127948, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2c418b6892e57384fb2c68a7c4042981, type: 2}
     m_RemovedComponents:
     - {fileID: 2015181091519530635, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
     - {fileID: 6639279296297968723, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}

@@ -249,7 +249,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -562,6 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startGameA: {fileID: 1218336046}
+  winnerOPtions: {fileID: 0}
   musicSource: {fileID: 1827039385}
   sfxSource: {fileID: 630119197}
   background: {fileID: 8300000, guid: 4c9b97afd7fcac14a98b01de28fd62a2, type: 3}
@@ -594,6 +595,7 @@ GameObject:
   - component: {fileID: 1218336045}
   - component: {fileID: 1218336047}
   - component: {fileID: 1218336046}
+  - component: {fileID: 1218336048}
   m_Layer: 0
   m_Name: SceneTransition
   m_TagString: Untagged
@@ -653,6 +655,68 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1218336048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218336044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: cdbfb6a5c5f04564c83319550ecca431, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1218336046}
+        m_TargetAssemblyTypeName: StartGameA, Assembly-CSharp
+        m_MethodName: OnPressA
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fb255469-67b8-4628-bd45-417ee2cd4425
+    m_ActionName: 'Menu/A[/XInputControllerWindows/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1218336046}
+        m_TargetAssemblyTypeName: StartGameA, Assembly-CSharp
+        m_MethodName: OnPressB
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 21de6e06-e673-41a3-9234-d2c1eb51274b
+    m_ActionName: 'Menu/B[/XInputControllerWindows/buttonEast]'
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Menu
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1529560913
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1529560914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,8 +789,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.906}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -191.91058, y: -159.73088}
-  m_SizeDelta: {x: 322.4208, y: 30.83}
+  m_AnchoredPosition: {x: -481.94534, y: -373.5254}
+  m_SizeDelta: {x: 746.7341, y: 66.8675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1539297536
 GameObject:
@@ -1164,7 +1228,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000061035, y: -2.5}
-  m_SizeDelta: {x: 800, y: 455}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1950531367
 MonoBehaviour:

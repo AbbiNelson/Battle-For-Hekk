@@ -8,6 +8,10 @@ TagManager:
   - Grid
   - Master
   - PlayerToken
+  - Jp
+  - Tp
+  - Wp
+  - Dp
   layers:
   - Default
   - TransparentFX
