@@ -13,13 +13,14 @@ public class MolotovThrow : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext ctx)
     {
+        
         if (!ctx.performed || Time.time < nextFireTime)
         {
             return;
         }
         
         Fireball.Play();
-        BasePlayer basePlayer = GetComponent<BasePlayer>();
+        var basePlayer = GetComponentInChildren<PlayerRotation>();
 
         Instantiate(Molotov, firePosition.position, basePlayer.facingDirection == 1 ? firePosition.rotation : firePosition.rotation * Quaternion.Euler(0f, 180f, 0f));
         nextFireTime = Time.time + cooldownTime;

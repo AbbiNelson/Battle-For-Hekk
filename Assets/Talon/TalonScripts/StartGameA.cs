@@ -1,9 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.UIElements.Experimental;
 
 public class StartGameA : MonoBehaviour
 {
@@ -18,24 +15,19 @@ public class StartGameA : MonoBehaviour
         transistionAnim = GetComponent<Animator>();
     }
 
-    public void OnPressA(InputAction.CallbackContext ctx)
+    public void OnPressA()
     {
-        if (ctx.performed && canPress)
+        if (canPress)
         {
             Debug.Log("Start Game A Pressed");
             canPress = false;
             StartCoroutine(LoadLevel());
-            // Add your logic to start Game A here
         }
     }
-    public void OnPressB(InputAction.CallbackContext ctx)
+    public void OnPressB()
     {
-        if (ctx.performed)
-        {
             Debug.Log("Exit Game B Pressed");
-            // Add your logic to start Game B here
             Application.Quit();
-        }
     }
     private void Update()
     {

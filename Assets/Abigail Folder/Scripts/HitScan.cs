@@ -9,23 +9,26 @@ public class HitScan : MonoBehaviour
     [SerializeField] private GameObject _bulletTrail;
     [SerializeField] private float _weaponRange = 10f;
     [SerializeField] private Animator _muzzleFlashAnimator;
+    public bool overrideDirection;
 
     private Vector2 worldPosition;
     private Vector2 direction;
     private float angle;
 
-    
-    public float damage;
+
     public void Shoot(InputAction.CallbackContext ctx)
     {
         if (!ctx.started)
             return;
 
-        
+        //_muzzleFlashAnimator.SetTrigger(name: "Shoot");
+
+        float dir = transform.GetChild(0).transform.up.x > 0 ? 1 : -1;
+        Vector3 angle = dir == 1 ? rifle.transform.right : -rifle.transform.right;
 
         var hit = Physics2D.Raycast(
             origin: (Vector2)_gunPoint.position,
-            direction: (Vector2)rifle.transform.right,
+            direction: angle,
             _weaponRange
             );
 
@@ -41,14 +44,11 @@ public class HitScan : MonoBehaviour
         {
             trailScript.SetTargetPosition(hit.point);
 
-            if (hit.collider.TryGetComponent(out Health health))
-            {
-                health.TakeDamage(damage);
-            }
+
         }
         else
         {
-            var endPosition = _gunPoint.position + rifle.transform.right * _weaponRange;
+            var endPosition = _gunPoint.position + angle * _weaponRange;
             trailScript.SetTargetPosition(endPosition);
         }
 
@@ -56,20 +56,30 @@ public class HitScan : MonoBehaviour
 
     }
 
-    public void HandleGunRotationMouse(InputAction.CallbackContext ctx)
-    {
-        worldPosition = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>());
-        direction = (worldPosition - (Vector2)rifle.transform.position).normalized;
-        rifle.transform.right = direction;
-        
-        
-    }
+    //public void HandleGunRotationMouse(InputAction.CallbackContext ctx)
+    //{
+    //    if (ctx.started)
+    //        overrideDirection = true;
+    //    else if (ctx.canceled)
+    //        overrideDirection = false;
 
-    public void HandleGunRotationGamepad(InputAction.CallbackContext ctx)
-    {
-        if (ctx.ReadValue<Vector2>() != Vector2.zero)
-        {
-            rifle.transform.right = ctx.ReadValue<Vector2>().normalized;
-        }
-    }
+    //    worldPosition = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>());
+    //    direction = (worldPosition - (Vector2)rifle.transform.position).normalized;
+    //    rifle.transform.right = direction;
+        
+    //    //rifle.transform.localScale = localScale;
+    //}
+
+    //public void HandleGunRotationGamepad(InputAction.CallbackContext ctx)
+    //{
+    //    if (ctx.started)
+    //        overrideDirection = true;
+    //    else if (ctx.canceled)
+    //        overrideDirection = false;
+
+    //    if (ctx.ReadValue<Vector2>() != Vector2.zero)
+    //    {
+    //        rifle.transform.right = ctx.ReadValue<Vector2>().normalized;
+    //    }
+    //}
 }

@@ -29,20 +29,19 @@ public class Cooldown
 
 public class BasePlayer : MonoBehaviour
 {
-    public int facingDirection = 1;
-
     private Rigidbody2D rb;
     private Collider2D coll;
     private Animator anim;
+    private ParticleManager particleManager;
 
     private Vector2 moveInput;
     private bool doubleJumpAvailable = true;
 
-    private float moveSpeed = 5f;
-    private float jumpForce = 10f;
+    private float moveSpeed = 8f;
+    private float jumpForce = 12f;
     private float dashForce = 15f;
-    private float dashDuration = 0.2f; // in seconds
-    private Cooldown dashCooldown = new Cooldown(5f); // 2 seconds cooldown
+    private float dashDuration = 0.3f; // in seconds
+    private Cooldown dashCooldown = new Cooldown(2f); // 2 seconds cooldown
     private float airControl = 3f;
 
     // methods to assign values to the player attributes
@@ -73,6 +72,7 @@ public class BasePlayer : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
+        particleManager = GetComponent<ParticleManager>();
     }
 
     void Update()
@@ -92,26 +92,17 @@ public class BasePlayer : MonoBehaviour
             rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, moveInput.x * moveSpeed, airControl * Time.deltaTime); // reduced air control with smoothing
         }
 
-        if (moveInput.x > .1f && facingDirection < 0)
-        {
-            Flip();
-        }
-        else if (moveInput.x < -.1f && facingDirection > 0)
-        {
-            Flip();
-        }
 
-        void Flip()
+    }
+       public void Flip(bool direction)
         {
-            facingDirection *= -1;
-
             Vector3 scale = transform.localScale;
-            scale.x *= -1;
+            scale.x = direction == false ? -1 : 1;
             transform.localScale = scale;
 
             if (transform.childCount > 0 && transform.GetChild(0).TryGetComponent(out SpriteRenderer sr))
             {
-                if (facingDirection < 0)
+                if (scale.x < 0)
                 {
                     sr.flipX = true;
                     sr.flipY = true;
@@ -123,19 +114,9 @@ public class BasePlayer : MonoBehaviour
                 }
             }
         }
-    }
 
     private void LateUpdate()
     {
-        if (rb.linearVelocityX > 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1); // facing right
-        }
-        else if (rb.linearVelocityX < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1); // facing left
-        }
-
         anim.SetBool("isGrounded", IsGrounded());
         anim.SetBool("isDashing", rb.gravityScale == 0);
 
@@ -171,7 +152,33 @@ public class BasePlayer : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
+        Vector2 input = context.ReadValue<Vector2>();
+        // If PlayerRotation exists and does not override direction, flip
+        var playerRotation = GetComponentInChildren<PlayerRotation>();
+        if (input != Vector2.zero && playerRotation != null && !playerRotation.overrideDirection)
+        {
+            Flip(input.x > 0);
+        }
+        else
+        {
+            // If HitScan exists and does not override direction, flip
+            var hitScan = GetComponent<HitScan>();
+            if (input != Vector2.zero && hitScan != null && !hitScan.overrideDirection)
+            {
+                Flip(input.x > 0);
+            }
+        }
+
+        moveInput = input;
+
+        if (context.performed && IsGrounded())
+        {
+            particleManager.OnMoveStart();
+        }
+        else if (context.canceled)
+        {
+            particleManager.OnMoveEnd();
+        }
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -188,6 +195,12 @@ public class BasePlayer : MonoBehaviour
 
             // trigger jump animation
             anim.SetTrigger("Jump");
+
+            // trigger jump particles
+            particleManager.OnJump();
+
+            // stop running particles
+            particleManager.OnMoveEnd();
         }
     }
 
@@ -209,11 +222,17 @@ public class BasePlayer : MonoBehaviour
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0; // disable gravity during dash
 
+        particleManager.OnMoveStart();
+
         // determine dash direction (if not pressing anything, base it off previously pressed horizontal direction)
-        Vector2 dashDirection = new Vector2(transform.localScale.x, 0).normalized;
+        float dir = moveInput.x != 0 ? moveInput.x : transform.localScale.x;
+
+        Vector2 dashDirection = new Vector2(dir, 0).normalized;
         rb.linearVelocity = dashDirection * dashForce;
 
         yield return new WaitForSeconds(dashDuration); // pause for dash duration
         rb.gravityScale = originalGravity; // restore original gravity
+
+        particleManager.OnMoveEnd();
     }
 }

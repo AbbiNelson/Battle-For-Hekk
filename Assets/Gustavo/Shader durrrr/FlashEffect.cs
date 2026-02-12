@@ -68,6 +68,15 @@ namespace FlashEffect
 
         #endregion
 
+        private void OnDisable()
+        {
+            StopAllCoroutines();
+            continuousFlashRoutine = null;
+            flashRoutine = null;
+
+            spriteRenderer.material = originalMaterial;
+        }
+
         private void Update()
         {
             
