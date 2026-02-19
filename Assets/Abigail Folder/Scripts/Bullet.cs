@@ -21,12 +21,12 @@ public class Bullet : MonoBehaviour
     {
         if ((whatDestroysBullet.value & (1 << collision.gameObject.layer)) > 0)
         {
-            if (collision.TryGetComponent(out Health health))
-            {
-                health.TakeDamage(damage);
-            }
-
             Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Bullet dealt damage");
+            collision.GetComponent<Health>().TakeDamage(damage);
         }
     }
     private void SetDestroyTime()

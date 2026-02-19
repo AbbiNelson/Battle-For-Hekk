@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 286493996894126690}
   - component: {fileID: 850790272641676926}
   - component: {fileID: -1477439601965131590}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,4 +183,5 @@ MonoBehaviour:
   destoryTime: 3
   whatDestroysBullet:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 448
+  damage: 10

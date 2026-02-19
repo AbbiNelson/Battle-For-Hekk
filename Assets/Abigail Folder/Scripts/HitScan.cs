@@ -56,30 +56,4 @@ public class HitScan : MonoBehaviour
 
     }
 
-    //public void HandleGunRotationMouse(InputAction.CallbackContext ctx)
-    //{
-    //    if (ctx.started)
-    //        overrideDirection = true;
-    //    else if (ctx.canceled)
-    //        overrideDirection = false;
-
-    //    worldPosition = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>());
-    //    direction = (worldPosition - (Vector2)rifle.transform.position).normalized;
-    //    rifle.transform.right = direction;
-        
-    //    //rifle.transform.localScale = localScale;
-    //}
-
-    //public void HandleGunRotationGamepad(InputAction.CallbackContext ctx)
-    //{
-    //    if (ctx.started)
-    //        overrideDirection = true;
-    //    else if (ctx.canceled)
-    //        overrideDirection = false;
-
-    //    if (ctx.ReadValue<Vector2>() != Vector2.zero)
-    //    {
-    //        rifle.transform.right = ctx.ReadValue<Vector2>().normalized;
-    //    }
-    //}
 }
