@@ -19,7 +19,6 @@ public class StartGameA : MonoBehaviour
     {
         if (canPress)
         {
-            Debug.Log("Start Game A Pressed");
             canPress = false;
             StartCoroutine(LoadLevel());
         }
@@ -31,7 +30,7 @@ public class StartGameA : MonoBehaviour
     }
     private void Update()
     {
-        if(SceneManager.GetActiveScene().buildIndex == 1)
+        if (SceneManager.GetActiveScene().buildIndex == 0)
         {
 
             delay -= Time.deltaTime;

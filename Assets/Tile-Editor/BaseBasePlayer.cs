@@ -48,7 +48,7 @@ public class BaseBasePlayer : MonoBehaviour
         }
         if (transform.GetChild(0).GetChild(3).gameObject.activeSelf)
         {
-            transform.GetChild(0).GetChild(3).GetComponent<HitScan>().Shoot(ctx);
+            transform.GetChild(0).GetChild(3).GetComponent<HitScan>().HandleGunShooting(ctx);
         }
     }
 

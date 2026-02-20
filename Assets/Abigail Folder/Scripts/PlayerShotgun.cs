@@ -13,8 +13,6 @@ public class PlayerShotgun : MonoBehaviour
     public float resetTime;
     public AudioSource Shoot;
 
-
-    public float facingDirection;
   
 
     private Vector2 worldPosition;
