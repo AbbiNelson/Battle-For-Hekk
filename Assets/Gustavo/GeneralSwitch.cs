@@ -12,7 +12,7 @@ public class GeneralSwitch : MonoBehaviour
         Ph = FindAnyObjectByType<PlayerHandler>().GetComponent<PlayerHandler>();
         indexToToggle = Ph.playerIndex;
         Ph.playerIndex++;
-        Switch(indexToToggle);
+        Switch(PlayerSelData.CharOptions[indexToToggle]);
     }
     public void Switch(int index)
     {

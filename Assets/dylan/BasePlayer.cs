@@ -159,15 +159,6 @@ public class BasePlayer : MonoBehaviour
         {
             Flip(input.x > 0);
         }
-        else
-        {
-            // If HitScan exists and does not override direction, flip
-            var hitScan = GetComponent<HitScan>();
-            if (input != Vector2.zero && hitScan != null && !hitScan.overrideDirection)
-            {
-                Flip(input.x > 0);
-            }
-        }
 
         moveInput = input;
 

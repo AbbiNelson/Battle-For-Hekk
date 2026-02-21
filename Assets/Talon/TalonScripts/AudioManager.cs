@@ -22,14 +22,6 @@ public class AudioManager : MonoBehaviour
     }
     private void Update()
     {
-        if(SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            if (startGameA.canPress == false && sfxSource.isPlaying == false && once == false)
-            {
-                once = true;
-                sfxSource.Play();
-            }
-        }
         if(SceneManager.GetActiveScene().buildIndex == 3)
         {
             if (winnerOPtions.canPress == false && sfxSource.isPlaying == false && once == false)

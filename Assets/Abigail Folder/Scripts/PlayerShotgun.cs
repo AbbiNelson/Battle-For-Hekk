@@ -1,9 +1,5 @@
-using System;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class PlayerShotgun : MonoBehaviour
 {
@@ -17,8 +13,6 @@ public class PlayerShotgun : MonoBehaviour
     public float resetTime;
     public AudioSource Shoot;
 
-
-    public float facingDirection;
   
 
     private Vector2 worldPosition;
