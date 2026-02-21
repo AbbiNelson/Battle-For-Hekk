@@ -47,7 +47,6 @@ namespace FlashEffect
         #region Methods
 
         #region Unity Callbacks
-
         void Start()
         {
          
@@ -73,10 +72,18 @@ namespace FlashEffect
             StopAllCoroutines();
             continuousFlashRoutine = null;
             flashRoutine = null;
-
-            spriteRenderer.material = originalMaterial;
         }
+        private void OnEnable()
+        {
+            // Reset flash state when enabled
 
+            continuousFlashRoutine = null;
+            flashRoutine = null;
+
+            spriteRenderer.material = originalMaterial; 
+            wasBurning = false;
+            wasPoisoned = false;
+        }
         private void Update()
         {
             

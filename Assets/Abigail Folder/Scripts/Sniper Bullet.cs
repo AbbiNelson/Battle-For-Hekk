@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class SniperBullet : MonoBehaviour
 {
     [SerializeField] private float nomralBulletSpeed = 15f;
     [SerializeField] private float destoryTime = 3f;
@@ -18,14 +18,20 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((whatDestroysBullet.value & (1 << collision.gameObject.layer)) > 0)
-        {
-            Destroy(gameObject);
-        }
+
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Bullet dealt damage");
             collision.GetComponent<Health>().TakeDamage(damage);
+        }
+        if (collision.gameObject.tag == "PlaceAble")
+        {
+            Debug.Log("Bullet dealt damage");
+            collision.GetComponent<ObjectHealth>().TakeDamage(damage);
+        }
+        if ((whatDestroysBullet.value & (1 << collision.gameObject.layer)) > 0)
+        {
+            Destroy(gameObject);
         }
     }
     private void SetDestroyTime()
@@ -35,6 +41,6 @@ public class Bullet : MonoBehaviour
 
     private void SetStraightVelocity()
     {
-        rb.linearVelocity = transform.right * nomralBulletSpeed;
+        rb.linearVelocity = transform.up * nomralBulletSpeed;
     }
 }

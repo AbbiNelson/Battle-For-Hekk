@@ -37,9 +37,9 @@ public class HitScan : MonoBehaviour
         {
             for (int i = 0; i < bulletSpawnPoint.Length; i++)
             {
-                bulletInst = Instantiate(bullet, bulletSpawnPoint[i].position, gun.transform.rotation);
+                bulletInst = Instantiate(bullet, bulletSpawnPoint[i].position, gun.transform.rotation * Quaternion.Euler(0f, 0f, -90f));
                 if (dir < 0)
-                    bulletInst.transform.Rotate(0, 0, 90);
+                    bulletInst.transform.Rotate(0, 0, 180);
 
                 Recoil();
 

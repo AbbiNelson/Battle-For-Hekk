@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class ObjectHealth : MonoBehaviour
 {
     public float health;
     public float maxHealth;
@@ -16,8 +16,7 @@ public class Health : MonoBehaviour
 
         if (health <= 0)
         {
-            transform.parent.gameObject.SetActive(false);
-            health = maxHealth;
+            Destroy(gameObject);
         }
 
 
@@ -29,11 +28,7 @@ public class Health : MonoBehaviour
 
         if (health <= 0)
         {
-            transform.parent.gameObject.SetActive(false);
-            health = maxHealth;
-        
-            Destroy(activeOuchieBurnInstance);
-            Destroy(activeOuchiePoisonInstance);
+            Destroy(gameObject);
         }
     }
 }

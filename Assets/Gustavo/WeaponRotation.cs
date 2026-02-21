@@ -15,27 +15,7 @@ public class PlayerRotation : MonoBehaviour
 
 
 
-    public void AimMouse(InputAction.CallbackContext ctx)
-    {
-        if (ctx.started)
-            overrideDirection = true;
-        else if (ctx.canceled)
-            overrideDirection = false;
 
-
-        // To do; Put this in update if needed
-        Vector3 mousePosition = ctx.ReadValue<Vector2>();
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
-        //Debug.Log(transform.parent.name + "; " + mousePosition);
-
-        Vector2 direction = new Vector2(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
-
-        transform.up = direction;
-
-        facingDirection = mousePosition.x < transform.parent.position.x ? -1 : 1;
-        GetComponentInParent<BasePlayer>().Flip(mousePosition.x > transform.parent.position.x);
-    }
 
     public void AimController(InputAction.CallbackContext ctx)
     {

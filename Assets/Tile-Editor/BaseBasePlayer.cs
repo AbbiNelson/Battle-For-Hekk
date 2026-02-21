@@ -52,12 +52,6 @@ public class BaseBasePlayer : MonoBehaviour
         }
     }
 
-    public void AimMouse(InputAction.CallbackContext ctx)
-    {
-        if (transform.GetChild(0).gameObject.activeSelf)
-            GetComponentsInChildren<PlayerRotation>().First(item => item.enabled).AimMouse(ctx);
-    }
-
     public void AimGamepad(InputAction.CallbackContext ctx)
     {
         if (transform.GetChild(0).gameObject.activeSelf)

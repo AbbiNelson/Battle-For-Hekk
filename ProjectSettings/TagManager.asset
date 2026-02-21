@@ -12,6 +12,7 @@ TagManager:
   - Tp
   - Wp
   - Dp
+  - PlaceAble
   layers:
   - Default
   - TransparentFX

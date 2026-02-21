@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1097707311028331736}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.70013076, w: 0.71401465}
-  m_LocalPosition: {x: 0.22, y: -0.28, z: 0}
+  m_LocalPosition: {x: 0, y: -0.32, z: 0}
   m_LocalScale: {x: 1, y: 1.188, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -564,13 +564,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7307286430094758830, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5084621777041176159}
-    - targetCorrespondingSourceObject: {fileID: 7307286430094758830, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1119953912344181329}
     - targetCorrespondingSourceObject: {fileID: 7307286430094758830, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2512170970262929497}
+    - targetCorrespondingSourceObject: {fileID: 7307286430094758830, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6293069890525847101}
   m_SourcePrefab: {fileID: 100100000, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
 --- !u!4 &2791458445356896168 stripped
 Transform:
@@ -587,25 +587,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7307286430094758830, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
   m_PrefabInstance: {fileID: 1440760815571323778}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5084621777041176159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8545068053320882220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43197cc2743513848b93270dc90d229b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gun: {fileID: 8545068053320882220}
-  bullet: {fileID: 2288612849079650451, guid: 10ca8e176ad93664b925cac515144c13, type: 3}
-  bulletSpawnPoint: []
-  recoilForce: 40
-  resetTime: 5
-  Shoot: {fileID: 2512170970262929497}
-  facingDirection: 0
 --- !u!114 &1119953912344181329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,7 +606,6 @@ MonoBehaviour:
   recoilForce: 80
   resetTime: 5
   Shoot: {fileID: 2512170970262929497}
-  facingDirection: 100.2
 --- !u!82 &2512170970262929497
 AudioSource:
   m_ObjectHideFlags: 0
@@ -723,6 +703,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6293069890525847101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8545068053320882220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2649405230c607468a8d3f4a0a7e20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneOffEffects:
+  - {fileID: 4193471680280732854, guid: 0e53055effc9e2448aca0b081b8e470e, type: 3}
+  - {fileID: 8914446931113690485, guid: 627ce2a5848462145b03a69510eb0c7c, type: 3}
+  continuousEffects:
+  - {fileID: 2906991857973506590, guid: 5048637c01cdc114dbc67f85b08c1575, type: 3}
+  continuousEffectOffsets:
+  - {x: 0, y: -1.5}
 --- !u!1001 &1481905452157747790
 PrefabInstance:
   m_ObjectHideFlags: 0
