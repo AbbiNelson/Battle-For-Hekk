@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-    public StartGameA startGameA;
     public WinnerOPtions winnerOPtions;
     [Header("------ Audio Source ------")]
     [SerializeField] AudioSource musicSource;
@@ -24,7 +23,7 @@ public class AudioManager : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().buildIndex == 1)
         {
-            if (startGameA.canPress == false && sfxSource.isPlaying == false && once == false)
+            if (sfxSource.isPlaying == false && once == false)
             {
                 once = true;
                 sfxSource.Play();

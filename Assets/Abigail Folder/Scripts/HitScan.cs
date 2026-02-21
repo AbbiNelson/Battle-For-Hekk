@@ -8,7 +8,6 @@ public class HitScan : MonoBehaviour
     [SerializeField] private GameObject rifle;
     [SerializeField] private GameObject _bulletTrail;
     [SerializeField] private float _weaponRange = 10f;
-    [SerializeField] private Animator _muzzleFlashAnimator;
     public bool overrideDirection;
 
     private Vector2 worldPosition;
