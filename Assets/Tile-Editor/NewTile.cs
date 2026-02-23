@@ -24,12 +24,11 @@ public class NewTile : MonoBehaviour
         {
             if (GM.inTileSelection && !selected)
             {
+                if (tile == null)
+                    return;
                 tile.transform.SetParent(transform, false);
                 tile.transform.localPosition = Vector3.zero;
                 tile.transform.localRotation = Quaternion.identity;
-
-                if (tile == null)
-                    return;
                 Debug.Log($"NewTile: Parented '{tile.name}' to '{name}'.");
                 GM.PlayerSelection += 1;
                 selected = true;
