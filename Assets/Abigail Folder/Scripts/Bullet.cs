@@ -18,15 +18,10 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player"||collision.gameObject.tag == "PlaceAble")
         {
             Debug.Log("Bullet dealt damage");
             collision.GetComponent<Health>().TakeDamage(damage);
-        }
-        if (collision.gameObject.tag == "PlaceAble")
-        {
-            Debug.Log("Bullet dealt damage");
-            collision.GetComponent<ObjectHealth>().TakeDamage(damage);
         }
         if ((whatDestroysBullet.value & (1 << collision.gameObject.layer)) > 0)
         {

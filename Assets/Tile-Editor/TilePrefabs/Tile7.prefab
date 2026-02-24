@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5893072719371897583}
   - component: {fileID: 6051713650723986355}
   - component: {fileID: 8099536526648794551}
-  - component: {fileID: 5270540103031182846}
-  - component: {fileID: -995845525631061311}
+  - component: {fileID: -1296504442458380571}
+  - component: {fileID: -6617223715971553027}
   m_Layer: 7
   m_Name: Tile7
   m_TagString: PlaceAble
@@ -152,7 +152,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32666665, y: 0.6427366}
   m_EdgeRadius: 0
---- !u!114 &5270540103031182846
+--- !u!114 &-1296504442458380571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,12 +161,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4981646709884746559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2628f586c89ed44c8d63a5ea40dfa66, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b668963ea47ab0479fe76ab7551a553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 60
---- !u!114 &-995845525631061311
+--- !u!114 &-6617223715971553027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4981646709884746559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e340978389365374c88105ac3e2cc4e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 405ac070a98bbd545a1125423709f239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   poisonTickTimers: 
