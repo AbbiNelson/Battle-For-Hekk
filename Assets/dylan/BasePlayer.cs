@@ -44,6 +44,8 @@ public class BasePlayer : MonoBehaviour
     private Cooldown dashCooldown = new Cooldown(2f); // 2 seconds cooldown
     private float airControl = 3f;
 
+    private float originalGravity;
+
     // methods to assign values to the player attributes
     public void AssignValues(float moveSpeed, float jumpForce, float dashForce, float dashDuration, Cooldown dashCooldown, float airControl)
     {
@@ -73,6 +75,11 @@ public class BasePlayer : MonoBehaviour
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
         particleManager = GetComponent<ParticleManager>();
+    }
+
+    void Start()
+    {
+        originalGravity = rb.gravityScale; // store original gravity for dash reset
     }
 
     void Update()
@@ -210,7 +217,6 @@ public class BasePlayer : MonoBehaviour
     IEnumerator DashCoroutine()
     {
         print("dash :333");
-        float originalGravity = rb.gravityScale;
         rb.gravityScale = 0; // disable gravity during dash
 
         particleManager.OnMoveStart();

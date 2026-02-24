@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
     void Update()
     {
 
-        if (health <= 0)
+        if (health <= 0 && gameObject.tag == "PlaceAble")
         {
             transform.parent.gameObject.SetActive(false);
             health = maxHealth;
