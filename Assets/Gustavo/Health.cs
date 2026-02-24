@@ -19,10 +19,14 @@ public class Health : MonoBehaviour
             transform.parent.gameObject.SetActive(false);
             health = maxHealth;
         }
+        else if (health <= 0)
+        {
+            transform.parent.gameObject.SetActive(false);
+            health = maxHealth;
 
 
+        }
     }
-
     public void TakeDamage(float amount)
     {
         health -= amount;
