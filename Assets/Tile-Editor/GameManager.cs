@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public TileNum TN;
     public bool combat;
     public PlayerHandler PH;
+    public GameObject[] disabledtiles;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +26,8 @@ public class GameManager : MonoBehaviour
         // refresh the player list each frame and update PlayerTokenCount
         var activeplayers = GameObject.FindObjectsByType<GeneralSwitch>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
         PlayerTokenCount = activeplayers.Length;
+
+        var placedtiles = FindObjectsByType<TileDisable>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         
         var player = FindObjectsByType<GeneralSwitch>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         PlayerCount = player.Length;
@@ -37,6 +40,10 @@ public class GameManager : MonoBehaviour
             inTileSelection = true;
             TN.ClearGeneratedTiles();
             TN.TileGen();
+            for (int i = 0; i < placedtiles.Length; i++)
+            {
+                placedtiles[i].gameObject.SetActive(false);
+            }
             for (int i = 0; i < playertokens.Length; i++)
             {
                 playertokens[i].gameObject.SetActive(true);
@@ -58,6 +65,10 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < playertokens.Length; i++)
             {
                 playertokens[i].gameObject.SetActive(false);
+            }
+            for (int i = 0; i < placedtiles.Length; i++)
+            {
+                placedtiles[i].gameObject.SetActive(true);
             }
 
         }

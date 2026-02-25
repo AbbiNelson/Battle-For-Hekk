@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8099536526648794551}
   - component: {fileID: -4041651123607661984}
   - component: {fileID: -209655067562633328}
+  - component: {fileID: -2292578629405445856}
   m_Layer: 7
   m_Name: Tile5
   m_TagString: PlaceAble
@@ -182,3 +183,15 @@ MonoBehaviour:
   burnTickTimers: 
   ouchieBurnPrefab: {fileID: 6627225906251929974, guid: ef78ab088a83ed6419042f81fa0399e2, type: 3}
   ouchiePoisonPrefab: {fileID: 8276245736837294029, guid: 444da631c3f43034bb6cba61a659a495, type: 3}
+--- !u!114 &-2292578629405445856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4981646709884746559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97be6a7eb48785b4faacf4de2cf32875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

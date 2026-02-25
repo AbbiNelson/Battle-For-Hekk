@@ -78,10 +78,10 @@ public class StatusEffectManager : MonoBehaviour
             for (int i = 0; i < poisonTickTimers.Count; i++)
                 poisonTickTimers[i]--;
 
-            healthScript.health -= 5;
+            healthScript.health -= 7f;
             poisonTickTimers.RemoveAll(x => x <= 0);
 
-            yield return new WaitForSeconds(1f); // tick interval
+            yield return new WaitForSeconds(1.5f); // tick interval
         }
 
         if (activeOuchiePoisonInstance != null)
