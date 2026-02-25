@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,6 +13,7 @@ public class HitScan : MonoBehaviour
     private float timeLeft;
     public float resetTime;
     public AudioSource Shoot;
+    public GameObject cooldown;
 
 
     private Vector2 worldPosition;
@@ -22,6 +24,14 @@ public class HitScan : MonoBehaviour
 
         timeLeft -= Time.deltaTime;
 
+        if (((timeLeft) / resetTime) >= 0)
+        {
+            cooldown.transform.localScale = new Vector3(((timeLeft) / resetTime) * 1.5f, 0.07f, 1);
+        }
+        else
+        {
+            cooldown.transform.localScale = new Vector3(0, 0.07f, 1);
+        }
     }
 
     public void Recoil()
