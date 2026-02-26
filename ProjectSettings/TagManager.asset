@@ -13,6 +13,7 @@ TagManager:
   - Wp
   - Dp
   - PlaceAble
+  - PointsBar
   layers:
   - Default
   - TransparentFX

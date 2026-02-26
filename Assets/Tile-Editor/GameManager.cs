@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
         var playertokens = FindObjectsByType<NewTile>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         if (PlayerTokenCount == 1)
         {
+            activeplayers[0].GetComponent<pointSys>().AddPoints(1);
             Arena.SetActive(false);
             TileSelection.SetActive(true);
             inTileSelection = true;

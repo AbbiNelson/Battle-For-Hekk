@@ -1609,6 +1609,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7731444915758908975, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: PS
+      value: 
+      objectReference: {fileID: 6858956347543456201}
     - target: {fileID: 7823961090606659521, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1694,6 +1698,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1585567232807479365}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5744275437745415234, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6858956347543456201}
     - targetCorrespondingSourceObject: {fileID: 7307286430094758830, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1119953912344181329}
@@ -1734,6 +1741,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4669122810778584412, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
   m_PrefabInstance: {fileID: 1440760815571323778}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6649943388713873344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5744275437745415234, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+  m_PrefabInstance: {fileID: 1440760815571323778}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6858956347543456201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6649943388713873344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43da656587e8dc439451546b419b0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 0
+  pointsBar: {fileID: 0}
+  pointsText: {fileID: 0}
 --- !u!4 &8542821743406215835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7309534923983665433, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}

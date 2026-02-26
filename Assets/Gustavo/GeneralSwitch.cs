@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class GeneralSwitch : MonoBehaviour
 {
-    public PlayerHandler Ph; // Reference to the PlayerInput component
+    public PlayerHandler Ph;
+    public pointSys PS;
     public GameObject[] objectsToToggle; // Array of objects to toggle
     public int indexToToggle;
     private void Start()
     {
         Ph = FindAnyObjectByType<PlayerHandler>().GetComponent<PlayerHandler>();
         indexToToggle = Ph.playerIndex;
+        PS.SetObjects(indexToToggle);
         Ph.playerIndex++;
         Switch(PlayerSelData.CharOptions[indexToToggle]);
     }
