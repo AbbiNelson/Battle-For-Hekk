@@ -21,8 +21,8 @@ public class pointSys : MonoBehaviour
     }
     public void SetObjects(int index)
     {
-        GameObject[] BarOptions = GameObject.FindGameObjectsWithTag("PointsBar");
-        BarOptions[index].SetActive(true);
+        var BarOptions = FindObjectsByType<BarOption>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        BarOptions[index].gameObject.SetActive(true);
         pointsBar = BarOptions[index].GetComponentInChildren<Bar>().gameObject;
         pointsText = BarOptions[index].GetComponentInChildren<text>().gameObject;
 

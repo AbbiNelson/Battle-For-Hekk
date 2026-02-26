@@ -367,6 +367,7 @@ GameObject:
   - component: {fileID: 79450488}
   - component: {fileID: 79450490}
   - component: {fileID: 79450489}
+  - component: {fileID: 79450491}
   m_Layer: 5
   m_Name: Pointbar1 (4)
   m_TagString: PointsBar
@@ -433,6 +434,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79450487}
   m_CullTransparentMesh: 1
+--- !u!114 &79450491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79450487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e54f7e67cb98648bdfa93e830acd11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &208238430
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +682,7 @@ GameObject:
   - component: {fileID: 628721878}
   - component: {fileID: 628721880}
   - component: {fileID: 628721879}
+  - component: {fileID: 628721881}
   m_Layer: 5
   m_Name: Pointbar1
   m_TagString: PointsBar
@@ -735,6 +749,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628721877}
   m_CullTransparentMesh: 1
+--- !u!114 &628721881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628721877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e54f7e67cb98648bdfa93e830acd11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &662862263
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +887,7 @@ GameObject:
   - component: {fileID: 751131743}
   - component: {fileID: 751131745}
   - component: {fileID: 751131744}
+  - component: {fileID: 751131746}
   m_Layer: 5
   m_Name: Pointbar1 (5)
   m_TagString: PointsBar
@@ -927,6 +954,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751131742}
   m_CullTransparentMesh: 1
+--- !u!114 &751131746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751131742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e54f7e67cb98648bdfa93e830acd11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &961449022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,6 +1202,7 @@ GameObject:
   - component: {fileID: 1098990404}
   - component: {fileID: 1098990406}
   - component: {fileID: 1098990405}
+  - component: {fileID: 1098990407}
   m_Layer: 5
   m_Name: Pointbar1 (1)
   m_TagString: PointsBar
@@ -1229,6 +1269,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098990403}
   m_CullTransparentMesh: 1
+--- !u!114 &1098990407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098990403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e54f7e67cb98648bdfa93e830acd11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1158254232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,6 +1391,7 @@ GameObject:
   - component: {fileID: 1260220987}
   - component: {fileID: 1260220989}
   - component: {fileID: 1260220988}
+  - component: {fileID: 1260220990}
   m_Layer: 5
   m_Name: Pointbar1 (3)
   m_TagString: PointsBar
@@ -1405,6 +1458,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260220986}
   m_CullTransparentMesh: 1
+--- !u!114 &1260220990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260220986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e54f7e67cb98648bdfa93e830acd11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1277427560
 GameObject:
   m_ObjectHideFlags: 0
@@ -20004,6 +20069,7 @@ GameObject:
   - component: {fileID: 1421714271}
   - component: {fileID: 1421714273}
   - component: {fileID: 1421714272}
+  - component: {fileID: 1421714274}
   m_Layer: 5
   m_Name: Pointbar1 (2)
   m_TagString: PointsBar
@@ -20070,6 +20136,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421714270}
   m_CullTransparentMesh: 1
+--- !u!114 &1421714274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421714270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e54f7e67cb98648bdfa93e830acd11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1508555931
 GameObject:
   m_ObjectHideFlags: 0
