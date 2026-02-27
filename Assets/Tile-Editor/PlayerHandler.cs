@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerHandler : MonoBehaviour
 {
+    public GameObject[] pointbarOptions;
     public int playerIndex = 0;
     public Sprite[] spriteOptions;
     [SerializeField] private Material[] playerColors;
@@ -30,6 +31,7 @@ public class PlayerHandler : MonoBehaviour
                 var input = managerinput.JoinPlayer(pairWithDevice: device);
                 input.gameObject.GetComponentInChildren<NewTile>(true).gameObject.GetComponent<SpriteRenderer>().sprite = spriteOptions[playerIndex];
                 input.gameObject.GetComponentInChildren<GeneralSwitch>().indexToToggle = playerIndex;
+                input.gameObject.GetComponentInChildren<pointSys>().SetObjects(pointbarOptions[playerIndex]);
                 playerIndex++;
             }
         }

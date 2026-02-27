@@ -446,6 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e54f7e67cb98648bdfa93e830acd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Barindex: 3
 --- !u!1 &208238430
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e54f7e67cb98648bdfa93e830acd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Barindex: 0
 --- !u!1 &662862263
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43da656587e8dc439451546b419b0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerIndex: 0
   points: 0
   pointsBar: {fileID: 0}
   pointsText: {fileID: 0}
@@ -966,6 +969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e54f7e67cb98648bdfa93e830acd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Barindex: 4
 --- !u!1 &961449022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,6 +1285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e54f7e67cb98648bdfa93e830acd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Barindex: 1
 --- !u!1 &1158254232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e54f7e67cb98648bdfa93e830acd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Barindex: 5
 --- !u!1 &1277427560
 GameObject:
   m_ObjectHideFlags: 0
@@ -20148,6 +20154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e54f7e67cb98648bdfa93e830acd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Barindex: 2
 --- !u!1 &1508555931
 GameObject:
   m_ObjectHideFlags: 0
@@ -38232,6 +38239,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2548884698816258644, guid: c0f72e0160f903440bed22ec13891b50, type: 3}
+      propertyPath: pointbarOptions.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548884698816258644, guid: c0f72e0160f903440bed22ec13891b50, type: 3}
+      propertyPath: 'pointbarOptions.Array.data[0]'
+      value: 
+      objectReference: {fileID: 628721877}
+    - target: {fileID: 2548884698816258644, guid: c0f72e0160f903440bed22ec13891b50, type: 3}
+      propertyPath: 'pointbarOptions.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1098990403}
+    - target: {fileID: 2548884698816258644, guid: c0f72e0160f903440bed22ec13891b50, type: 3}
+      propertyPath: 'pointbarOptions.Array.data[2]'
+      value: 
+      objectReference: {fileID: 79450487}
+    - target: {fileID: 2548884698816258644, guid: c0f72e0160f903440bed22ec13891b50, type: 3}
+      propertyPath: 'pointbarOptions.Array.data[3]'
+      value: 
+      objectReference: {fileID: 751131742}
+    - target: {fileID: 2548884698816258644, guid: c0f72e0160f903440bed22ec13891b50, type: 3}
+      propertyPath: 'pointbarOptions.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1421714270}
+    - target: {fileID: 2548884698816258644, guid: c0f72e0160f903440bed22ec13891b50, type: 3}
+      propertyPath: 'pointbarOptions.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1260220986}
     - target: {fileID: 2718205771415261755, guid: c0f72e0160f903440bed22ec13891b50, type: 3}
       propertyPath: m_Name
       value: PlayerHandler

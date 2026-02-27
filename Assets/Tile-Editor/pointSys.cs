@@ -20,13 +20,12 @@ public class pointSys : MonoBehaviour
     {
 
     }
-    public void SetObjects(int index)
+    public void SetObjects(GameObject bar)
     {
-        playerIndex = index;
         var BarOptions = FindObjectsByType<BarOption>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-        BarOptions[index].gameObject.SetActive(true);
-        pointsBar = BarOptions[index].GetComponentInChildren<Bar>().gameObject;
-        pointsText = BarOptions[index].GetComponentInChildren<text>().gameObject;
+        bar.gameObject.SetActive(true);
+        pointsBar = bar.GetComponentInChildren<Bar>().gameObject;
+        pointsText = bar.GetComponentInChildren<text>().gameObject;
 
     }
     public void AddPoints(int pointsToAdd)

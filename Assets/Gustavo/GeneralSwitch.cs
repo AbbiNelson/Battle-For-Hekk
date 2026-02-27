@@ -9,7 +9,6 @@ public class GeneralSwitch : MonoBehaviour
     private void Start()
     {
         Ph = FindAnyObjectByType<PlayerHandler>().GetComponent<PlayerHandler>();
-        PS.SetObjects(indexToToggle);
         Switch(PlayerSelData.CharOptions[indexToToggle]);
     }
     public void Switch(int index)
