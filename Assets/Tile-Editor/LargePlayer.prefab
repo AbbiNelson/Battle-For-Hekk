@@ -1349,6 +1349,10 @@ PrefabInstance:
       propertyPath: cooldown
       value: 
       objectReference: {fileID: 4759319123793442590}
+    - target: {fileID: 718286556095352936, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
+      propertyPath: cooldownTime
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1167375340428239649, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.251
@@ -1918,6 +1922,10 @@ PrefabInstance:
     - target: {fileID: 3157051505937883690, guid: 7a0153643d9b7a741a107a683c5dc894, type: 3}
       propertyPath: m_Name
       value: TokenPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157051505937883690, guid: 7a0153643d9b7a741a107a683c5dc894, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9084172568760683267, guid: 7a0153643d9b7a741a107a683c5dc894, type: 3}
       propertyPath: m_LocalPosition.x

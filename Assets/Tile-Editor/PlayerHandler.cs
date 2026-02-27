@@ -3,9 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerHandler : MonoBehaviour
 {
-    public int playerCount =  0;
     public int playerIndex = 0;
-    public Sprite selectedSprite;
     public Sprite[] spriteOptions;
     [SerializeField] private Material[] playerColors;
     public PlayerInputManager managerinput;
@@ -28,15 +26,12 @@ public class PlayerHandler : MonoBehaviour
 
             if (device is Gamepad)
             {
-                Debug.Log("Joining Player " + playerCount + " with device: " + device.displayName);
-
+                Debug.Log("Joining Player " + playerIndex + " with device: " + device.displayName);
                 var input = managerinput.JoinPlayer(pairWithDevice: device);
+                input.gameObject.GetComponentInChildren<NewTile>(true).gameObject.GetComponent<SpriteRenderer>().sprite = spriteOptions[playerIndex];
+                input.gameObject.GetComponentInChildren<GeneralSwitch>().indexToToggle = playerIndex;
+                playerIndex++;
             }
         }
-    }
-    public void SelectSprite() {
-        Debug.Log("Selecting Sprite for Player " + playerCount);
-        selectedSprite = spriteOptions[playerCount];
-
     }
 }

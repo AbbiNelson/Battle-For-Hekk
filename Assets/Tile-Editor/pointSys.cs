@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class pointSys : MonoBehaviour
 {
+    public int playerIndex;
     public int points;
     public GameObject pointsBar;
     public GameObject pointsText;
@@ -21,6 +22,7 @@ public class pointSys : MonoBehaviour
     }
     public void SetObjects(int index)
     {
+        playerIndex = index;
         var BarOptions = FindObjectsByType<BarOption>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         BarOptions[index].gameObject.SetActive(true);
         pointsBar = BarOptions[index].GetComponentInChildren<Bar>().gameObject;
