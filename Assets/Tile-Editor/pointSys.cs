@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class pointSys : MonoBehaviour
@@ -9,7 +10,7 @@ public class pointSys : MonoBehaviour
     public int points;
     public GameObject pointsBar;
     public GameObject pointsText;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called once before the first execution of Update after the MonoBehaviour is created starting
     void Start()
     {
 
@@ -24,7 +25,7 @@ public class pointSys : MonoBehaviour
     {
         var BarOptions = FindObjectsByType<BarOption>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         bar.gameObject.SetActive(true);
-        pointsBar = bar.GetComponentInChildren<Bar>().gameObject;
+        pointsBar = bar.gameObject;
         pointsText = bar.GetComponentInChildren<text>().gameObject;
 
     }
@@ -32,6 +33,10 @@ public class pointSys : MonoBehaviour
     {
         points += pointsToAdd;
         pointsText.GetComponent<TMP_Text>().text = points.ToString();
-        pointsBar.GetComponent<Image>().fillAmount = (points / 10);
+        pointsBar.GetComponent<Image>().fillAmount = (points / 10f);
+        if(points >= 10)
+            {
+                SceneManager.LoadScene("WinScreen");
+        }
     }
 }
