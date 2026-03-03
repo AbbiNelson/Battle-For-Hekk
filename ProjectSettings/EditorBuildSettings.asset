@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/characterSel.unity
     guid: db2e90ba9e2a9f54a927c71349375095
   - enabled: 0
-    path: Assets/Scenes/WIn Screen.unity
+    path: Assets/Scenes/Win Screen.unity
     guid: c8dabc240400417409109e023096210b
   - enabled: 1
     path: Assets/Scenes/Arena-One.unity

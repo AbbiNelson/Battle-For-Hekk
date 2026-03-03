@@ -36,7 +36,7 @@ public class pointSys : MonoBehaviour
         pointsBar.GetComponent<Image>().fillAmount = (points / 10f);
         if(points >= 10)
             {
-                SceneManager.LoadScene("WinScreen");
+                SceneManager.LoadScene("Win Screen");
         }
     }
 }

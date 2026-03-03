@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class StatusEffectManager : MonoBehaviour
@@ -56,9 +57,15 @@ public class StatusEffectManager : MonoBehaviour
     {
         Debug.Log("Burn");
         if (burnTickTimers == null) burnTickTimers = new List<int>();
-        burnTickTimers.Add(ticks);
 
-        
+        // Clamp incoming tick value to a maximum of 5
+        int clampedTicks = Mathf.Min(ticks, 5);
+        burnTickTimers.Add(clampedTicks);
+
+        // Ensure we never keep more than 5 active burn timers (remove oldest if necessary)
+        while (burnTickTimers.Count > 5)
+            burnTickTimers.RemoveAt(0);
+
         if (activeOuchieBurnInstance == null && ouchieBurnPrefab != null)
         {
             activeOuchieBurnInstance = Instantiate(ouchieBurnPrefab, transform);
@@ -78,7 +85,7 @@ public class StatusEffectManager : MonoBehaviour
             for (int i = 0; i < poisonTickTimers.Count; i++)
                 poisonTickTimers[i]--;
 
-            healthScript.health -= 7f;
+            healthScript.health -= 10f;
             poisonTickTimers.RemoveAll(x => x <= 0);
 
             yield return new WaitForSeconds(1.5f); // tick interval
@@ -87,10 +94,8 @@ public class StatusEffectManager : MonoBehaviour
         if (activeOuchiePoisonInstance != null)
         {
             Destroy(activeOuchiePoisonInstance);
-            activeOuchieBurnInstance = null;
+            activeOuchiePoisonInstance = null;
         }
-        
-
 
         poisonCoroutine = null;
     }
@@ -104,7 +109,7 @@ public class StatusEffectManager : MonoBehaviour
             for (int i = 0; i < burnTickTimers.Count; i++)
                 burnTickTimers[i]--;
 
-            healthScript.health -= 5; 
+            healthScript.health -= 4;
             burnTickTimers.RemoveAll(x => x <= 0);
 
             yield return new WaitForSeconds(1f); // tick interval
@@ -116,8 +121,6 @@ public class StatusEffectManager : MonoBehaviour
             Destroy(activeOuchieBurnInstance);
             activeOuchieBurnInstance = null;
         }
-        
-
 
         burnCoroutine = null;
     }

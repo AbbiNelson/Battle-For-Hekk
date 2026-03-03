@@ -1351,7 +1351,7 @@ PrefabInstance:
       objectReference: {fileID: 4759319123793442590}
     - target: {fileID: 718286556095352936, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: cooldownTime
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1167375340428239649, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1507,23 +1507,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3878623388235742229, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7072295
+      value: 0.7058709
       objectReference: {fileID: 0}
     - target: {fileID: 3878623388235742229, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0009874739
+      value: 0.000985577
       objectReference: {fileID: 0}
     - target: {fileID: 3878623388235742229, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0009871293
+      value: 0.0009890231
       objectReference: {fileID: 0}
     - target: {fileID: 3878623388235742229, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7069827
+      value: -0.7083391
       objectReference: {fileID: 0}
     - target: {fileID: 3878623388235742229, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -89.98
+      value: -90.2
       objectReference: {fileID: 0}
     - target: {fileID: 4132948867504210417, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_Sprite
@@ -1647,7 +1647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8859329423363650920, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.5
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 8966874623439127948, guid: beacec7c429a3824082bb9fd8e12c234, type: 3}
       propertyPath: m_Controller
@@ -1762,6 +1762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43da656587e8dc439451546b419b0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerIndex: 0
   points: 0
   pointsBar: {fileID: 0}
   pointsText: {fileID: 0}
