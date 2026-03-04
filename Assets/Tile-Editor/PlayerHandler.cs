@@ -6,7 +6,7 @@ public class PlayerHandler : MonoBehaviour
     public GameObject[] pointbarOptions;
     public int playerIndex = 0;
     public Sprite[] spriteOptions;
-    [SerializeField] private Material[] playerColors;
+    public Material[] playerColors;
     public PlayerInputManager managerinput;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
