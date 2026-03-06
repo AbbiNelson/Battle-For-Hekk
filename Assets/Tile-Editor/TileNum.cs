@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class TileNum : MonoBehaviour
 {
-    public int tileNum;
     public GameObject[] tileList; // stores generated instances
     public GameObject[] tileOptions; // prefabs to pick from
 
@@ -23,7 +22,7 @@ public class TileNum : MonoBehaviour
     public void TileGen()
     {
         // Allocate an array sized to the requested number of tiles
-        int tileAmount = Random.Range(InputSystem.devices.Count, tileNum + 1);
+        int tileAmount = Random.Range(InputSystem.devices.Count, InputSystem.devices.Count*2 + 1);
         tileList = new GameObject[tileAmount];
 
         for (int i = 0; i < tileAmount; i++)

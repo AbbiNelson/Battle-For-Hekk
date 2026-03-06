@@ -16,7 +16,14 @@ public class MenuManager : MonoBehaviour
         Debug.Log(players.Length);
         if (players.Length == 0)
         {
-            SceneManager.LoadScene("Arena-One");
+            if (true)
+            {
+                SceneManager.LoadScene("Arena-Two");
+            }
+            else
+            {
+                SceneManager.LoadScene("Arena-One");
+            }
         }
         for (int i = 0; i < players.Length; i++)
         {
